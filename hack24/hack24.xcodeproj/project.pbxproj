@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		367C942C20776220CDFCA5FD /* Pods_Hack24.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FEF95C786C1378D66F792B4 /* Pods_Hack24.framework */; };
+		4C245B321C9E117D00C21663 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C245B311C9E117D00C21663 /* CardView.swift */; };
+		4C245B341C9E11B700C21663 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C245B331C9E11B700C21663 /* CardView.xib */; };
 		4C371EF61C9D86640077A8E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371EF51C9D86640077A8E9 /* AppDelegate.swift */; };
 		4C371EF81C9D86640077A8E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371EF71C9D86640077A8E9 /* ViewController.swift */; };
 		4C371EFD1C9D86640077A8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C371EFC1C9D86640077A8E9 /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		083D4B47B0119758CFCD8BC9 /* Pods-Hack24.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hack24.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hack24/Pods-Hack24.release.xcconfig"; sourceTree = "<group>"; };
+		4C245B311C9E117D00C21663 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		4C245B331C9E11B700C21663 /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		4C371EF21C9D86640077A8E9 /* Hack24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hack24.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C371EF51C9D86640077A8E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C371EF71C9D86640077A8E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C245B301C9E111A00C21663 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C245B311C9E117D00C21663 /* CardView.swift */,
+				4C245B331C9E11B700C21663 /* CardView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		4C371EE91C9D86640077A8E9 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +155,7 @@
 		4C371EF41C9D86640077A8E9 /* Hack24 */ = {
 			isa = PBXGroup;
 			children = (
+				4C245B301C9E111A00C21663 /* Views */,
 				4C9F8DD01C9DBE670016AEEB /* Extensions */,
 				4C9F8DC91C9DBC320016AEEB /* Model */,
 				4C371F231C9D8A600077A8E9 /* AddItemViewController.swift */,
@@ -325,6 +339,7 @@
 			files = (
 				4C371F001C9D86640077A8E9 /* LaunchScreen.storyboard in Resources */,
 				4C371EFD1C9D86640077A8E9 /* Assets.xcassets in Resources */,
+				4C245B341C9E11B700C21663 /* CardView.xib in Resources */,
 				4C371F2C1C9D8A600077A8E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +427,7 @@
 				4C371F281C9D8A600077A8E9 /* AddItemViewController.swift in Sources */,
 				4C9F8DD21C9DBE820016AEEB /* UIColor+Extensions.swift in Sources */,
 				4C371F2A1C9D8A600077A8E9 /* ItemCell.swift in Sources */,
+				4C245B321C9E117D00C21663 /* CardView.swift in Sources */,
 				4C9F8DC81C9DAD910016AEEB /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -60,12 +60,13 @@ class Tile {
 class BoardViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
-    
-    
+    @IBOutlet weak var containView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        
+        scrollView.delegate = self
+        scrollView.minimumZoomScale = 0.1
+        scrollView.maximumZoomScale = 1;
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -83,26 +84,27 @@ class BoardViewController: UIViewController {
                 } else {
                     newTile = tiles[i-1].right(view)
                 }
-                newTile.rect.size.height = 1;
-                newTile.rect.size.width = 1;
+                newTile.rect.size.width = 0.8;
+                if (i == 1) {
+                    newTile.rect.size.height = 0.5;
+                } else {
+                   newTile.rect.size.height = 1;
+                }
+                
                 tiles.append(newTile)
             } else {
                 startTile = Tile(view: view)
                 startTile?.rect.size.height = 1;
-                startTile?.rect.size.width = 1;
+                startTile?.rect.size.width = 0.8;
                 tiles.append(startTile!)
             }
         }
         layoutViews(tiles);
     }
     
-    private func prepareViews(views:[UIView]) {
-        
-    }
-    
     private func addTile(tile:Tile?) {
-        if let tile = tile where tile.view.superview != self.scrollView {
-            self.scrollView.addSubview(tile.view);
+        if let tile = tile where tile.view.superview != self.containView {
+            self.containView.addSubview(tile.view);
             addTile(tile.leftTile)
             addTile(tile.rightTile)
             addTile(tile.belowTile)
@@ -112,7 +114,7 @@ class BoardViewController: UIViewController {
     }
     
     private func layoutViews(positions:[Tile]) {
-        for child in scrollView.subviews {
+        for child in containView.subviews {
             child.removeFromSuperview()
         }
         let width = scrollView.frame.width - (standardMargin * 2);
@@ -123,22 +125,19 @@ class BoardViewController: UIViewController {
         
         for tile in positions {
             addTile(tile)
-            
-            tile.rect.size.height = 1;
-            tile.rect.size.width = 1;
             print("Placing tile at pos " + NSStringFromCGRect(tile.rect))
 //            let tileHeight = height * tile.rect.height;
 //            let tileWidth = width * tile.rect.width;
-            scrollView.addConstraint(constraint(item: tile.view, attribute: .Width, toItem:scrollView, constant:-standardMargin * 2))
-            scrollView.addConstraint(constraint(item: tile.view, attribute: .Height, toItem:scrollView, constant:-standardMargin * 2))
+            scrollView.addConstraint(constraint(item: tile.view, attribute: .Width, toItem:scrollView, multiplier:tile.rect.size.width, constant:-standardMargin * 2))
+            scrollView.addConstraint(constraint(item: tile.view, attribute: .Height, toItem:scrollView, multiplier:tile.rect.size.height, constant:-standardMargin * 2))
             if let left = tile.leftTile {
-                scrollView.addConstraint(horizontalConstraint(left.view, right: tile.view))
+                containView.addConstraint(horizontalConstraint(left.view, right: tile.view))
             } else {
-                scrollView.addConstraint(constraint(item: tile.view, attribute: .LeadingMargin, relatedBy: .Equal, toItem: scrollView, attribute: .LeadingMargin, multiplier: 1, constant: standardMargin))
+                containView.addConstraint(constraint(item: tile.view, attribute: .LeadingMargin, relatedBy: .Equal, toItem: containView, attribute: .LeadingMargin, multiplier: 1, constant: standardMargin))
             }
             
             if let right = tile.rightTile {
-                scrollView.addConstraint(horizontalConstraint(tile.view, right: right.view))
+                containView.addConstraint(horizontalConstraint(tile.view, right: right.view))
             } else {
                 if let edge = rightEdge {
                     if CGRectGetMaxX(tile.rect) > CGRectGetMaxX(edge.rect) {
@@ -150,13 +149,13 @@ class BoardViewController: UIViewController {
             }
             
             if let top = tile.aboveTile {
-                scrollView.addConstraint(verticalConstraint(top.view, bottom: tile.view))
+                containView.addConstraint(verticalConstraint(top.view, bottom: tile.view))
             } else {
-                scrollView.addConstraint(constraint(item: tile.view, attribute: .TopMargin, relatedBy: .Equal, toItem: scrollView, attribute: .TopMargin, multiplier: 1, constant: standardMargin))
+                containView.addConstraint(constraint(item: tile.view, attribute: .TopMargin, relatedBy: .Equal, toItem: containView, attribute: .TopMargin, multiplier: 1, constant: standardMargin))
             }
             
             if let bottom = tile.belowTile {
-                scrollView.addConstraint(verticalConstraint(tile.view, bottom: bottom.view))
+                containView.addConstraint(verticalConstraint(tile.view, bottom: bottom.view))
             } else {
                 if let edge = bottomEdge {
                     if CGRectGetMaxY(tile.rect) > CGRectGetMaxY(edge.rect) {
@@ -170,11 +169,13 @@ class BoardViewController: UIViewController {
         }
         
         if let edge = rightEdge {
-            scrollView.addConstraint(constraint(item: scrollView, attribute: .TrailingMargin, relatedBy: .Equal, toItem: edge.view, attribute: .TrailingMargin, multiplier: 1, constant: standardMargin))
+            containView.addConstraint(constraint(item: containView, attribute: .TrailingMargin, relatedBy: .Equal, toItem: edge.view, attribute: .TrailingMargin, multiplier: 1, constant: standardMargin))
         }
         if let edge = bottomEdge {
-            scrollView.addConstraint(constraint(item: scrollView, attribute: .BottomMargin, relatedBy: .Equal, toItem: edge.view, attribute: .BottomMargin, multiplier: 1, constant: standardMargin))
+            containView.addConstraint(constraint(item: containView, attribute: .BottomMargin, relatedBy: .Equal, toItem: edge.view, attribute: .BottomMargin, multiplier: 1, constant: standardMargin))
         }
+        
+        self.view.layoutIfNeeded()
         
     }
     
@@ -202,4 +203,14 @@ class BoardViewController: UIViewController {
         return [tileMinX, tileMinY, tileMaxX, tileMaxY];
     }
     
+}
+
+extension BoardViewController: UIScrollViewDelegate {
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return self.containView;
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        
+    }
 }

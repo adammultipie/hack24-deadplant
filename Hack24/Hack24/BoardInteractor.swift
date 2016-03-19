@@ -45,7 +45,7 @@ class BoardsInteractor {
                 self.onBeaconsDiscovered(beacons)
             })
         } else {
-            let url = "http://192.168.252.129:8080/noticeboard/";
+            let url = "http://192.168.252.129:8080/api/noticeboard/";
             let req = NSURLRequest(URL: NSURL(string: url)!)
             do {
                 let json = try NSString(data: NSJSONSerialization.dataWithJSONObject(requestBody, options: .PrettyPrinted), encoding: NSUTF8StringEncoding)
@@ -75,6 +75,11 @@ class BoardsInteractor {
             }
         }
         
+    }
+    
+    func getBoardMessages(id:String) -> Request {
+        let url = "http://192.168.252.129:8080/api/noticeboard/" + id + "/messages";
+        return request(.GET, url, parameters: nil, encoding: .JSON, headers: ["Authorization": "Token eee5f4a34a581f08b6a63b416521507cf4c6cbba"])
     }
     
 }
