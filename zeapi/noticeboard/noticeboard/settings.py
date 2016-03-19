@@ -26,7 +26,8 @@ SECRET_KEY = 'v6sp(ks10&bapywc$0#2s^4*=txa)#s!oj)oe8ibg0@$xg4a*v'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+MEDIA_ROOT = '/srv/media/'
+MEDIA_URL = '/media/'
 
 # Application definition
 
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'jsonfield',
     'boards'
 ]
@@ -122,3 +124,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {
+    'PAGE_SIZE': 10,
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    )
+}
+
