@@ -7,68 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C8C70F71C9D4FFB00435764 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C70F61C9D4FFB00435764 /* main.m */; };
-		4C8C70FA1C9D4FFB00435764 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C70F91C9D4FFB00435764 /* AppDelegate.m */; };
-		4C8C70FD1C9D4FFB00435764 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C70FC1C9D4FFB00435764 /* ViewController.m */; };
-		4C8C71001C9D4FFB00435764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8C70FE1C9D4FFB00435764 /* Main.storyboard */; };
-		4C8C71021C9D4FFB00435764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C8C71011C9D4FFB00435764 /* Assets.xcassets */; };
-		4C8C71051C9D4FFB00435764 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8C71031C9D4FFB00435764 /* LaunchScreen.storyboard */; };
-		4C8C71101C9D4FFB00435764 /* hack24Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C710F1C9D4FFB00435764 /* hack24Tests.m */; };
-		4C8C711B1C9D4FFB00435764 /* hack24UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C711A1C9D4FFB00435764 /* hack24UITests.m */; };
+		4C371EF61C9D86640077A8E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371EF51C9D86640077A8E9 /* AppDelegate.swift */; };
+		4C371EF81C9D86640077A8E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371EF71C9D86640077A8E9 /* ViewController.swift */; };
+		4C371EFB1C9D86640077A8E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C371EF91C9D86640077A8E9 /* Main.storyboard */; };
+		4C371EFD1C9D86640077A8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C371EFC1C9D86640077A8E9 /* Assets.xcassets */; };
+		4C371F001C9D86640077A8E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C371EFE1C9D86640077A8E9 /* LaunchScreen.storyboard */; };
+		4C371F0B1C9D86650077A8E9 /* Hack24Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371F0A1C9D86650077A8E9 /* Hack24Tests.swift */; };
+		4C371F161C9D86650077A8E9 /* Hack24UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371F151C9D86650077A8E9 /* Hack24UITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4C8C710C1C9D4FFB00435764 /* PBXContainerItemProxy */ = {
+		4C371F071C9D86640077A8E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4C8C70EA1C9D4FFB00435764 /* Project object */;
+			containerPortal = 4C371EEA1C9D86640077A8E9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4C8C70F11C9D4FFB00435764;
-			remoteInfo = hack24;
+			remoteGlobalIDString = 4C371EF11C9D86640077A8E9;
+			remoteInfo = Hack24;
 		};
-		4C8C71171C9D4FFB00435764 /* PBXContainerItemProxy */ = {
+		4C371F121C9D86650077A8E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4C8C70EA1C9D4FFB00435764 /* Project object */;
+			containerPortal = 4C371EEA1C9D86640077A8E9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4C8C70F11C9D4FFB00435764;
-			remoteInfo = hack24;
+			remoteGlobalIDString = 4C371EF11C9D86640077A8E9;
+			remoteInfo = Hack24;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4C8C70F21C9D4FFB00435764 /* hack24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hack24.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C8C70F61C9D4FFB00435764 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4C8C70F81C9D4FFB00435764 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		4C8C70F91C9D4FFB00435764 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4C8C70FB1C9D4FFB00435764 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4C8C70FC1C9D4FFB00435764 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		4C8C70FF1C9D4FFB00435764 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4C8C71011C9D4FFB00435764 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4C8C71041C9D4FFB00435764 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4C8C71061C9D4FFB00435764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C8C710B1C9D4FFB00435764 /* hack24Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hack24Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C8C710F1C9D4FFB00435764 /* hack24Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hack24Tests.m; sourceTree = "<group>"; };
-		4C8C71111C9D4FFB00435764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C8C71161C9D4FFB00435764 /* hack24UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hack24UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C8C711A1C9D4FFB00435764 /* hack24UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hack24UITests.m; sourceTree = "<group>"; };
-		4C8C711C1C9D4FFB00435764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C371EF21C9D86640077A8E9 /* Hack24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hack24.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C371EF51C9D86640077A8E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4C371EF71C9D86640077A8E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C371EFA1C9D86640077A8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4C371EFC1C9D86640077A8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C371EFF1C9D86640077A8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4C371F011C9D86640077A8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C371F061C9D86640077A8E9 /* Hack24Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hack24Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C371F0A1C9D86650077A8E9 /* Hack24Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hack24Tests.swift; sourceTree = "<group>"; };
+		4C371F0C1C9D86650077A8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C371F111C9D86650077A8E9 /* Hack24UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hack24UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C371F151C9D86650077A8E9 /* Hack24UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hack24UITests.swift; sourceTree = "<group>"; };
+		4C371F171C9D86650077A8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4C8C70EF1C9D4FFB00435764 /* Frameworks */ = {
+		4C371EEF1C9D86640077A8E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C8C71081C9D4FFB00435764 /* Frameworks */ = {
+		4C371F031C9D86640077A8E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C8C71131C9D4FFB00435764 /* Frameworks */ = {
+		4C371F0E1C9D86650077A8E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -78,147 +74,137 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C8C70E91C9D4FFB00435764 = {
+		4C371EE91C9D86640077A8E9 = {
 			isa = PBXGroup;
 			children = (
-				4C8C70F41C9D4FFB00435764 /* hack24 */,
-				4C8C710E1C9D4FFB00435764 /* hack24Tests */,
-				4C8C71191C9D4FFB00435764 /* hack24UITests */,
-				4C8C70F31C9D4FFB00435764 /* Products */,
+				4C371EF41C9D86640077A8E9 /* Hack24 */,
+				4C371F091C9D86650077A8E9 /* Hack24Tests */,
+				4C371F141C9D86650077A8E9 /* Hack24UITests */,
+				4C371EF31C9D86640077A8E9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4C8C70F31C9D4FFB00435764 /* Products */ = {
+		4C371EF31C9D86640077A8E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C8C70F21C9D4FFB00435764 /* hack24.app */,
-				4C8C710B1C9D4FFB00435764 /* hack24Tests.xctest */,
-				4C8C71161C9D4FFB00435764 /* hack24UITests.xctest */,
+				4C371EF21C9D86640077A8E9 /* Hack24.app */,
+				4C371F061C9D86640077A8E9 /* Hack24Tests.xctest */,
+				4C371F111C9D86650077A8E9 /* Hack24UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4C8C70F41C9D4FFB00435764 /* hack24 */ = {
+		4C371EF41C9D86640077A8E9 /* Hack24 */ = {
 			isa = PBXGroup;
 			children = (
-				4C8C70F81C9D4FFB00435764 /* AppDelegate.h */,
-				4C8C70F91C9D4FFB00435764 /* AppDelegate.m */,
-				4C8C70FB1C9D4FFB00435764 /* ViewController.h */,
-				4C8C70FC1C9D4FFB00435764 /* ViewController.m */,
-				4C8C70FE1C9D4FFB00435764 /* Main.storyboard */,
-				4C8C71011C9D4FFB00435764 /* Assets.xcassets */,
-				4C8C71031C9D4FFB00435764 /* LaunchScreen.storyboard */,
-				4C8C71061C9D4FFB00435764 /* Info.plist */,
-				4C8C70F51C9D4FFB00435764 /* Supporting Files */,
+				4C371EF51C9D86640077A8E9 /* AppDelegate.swift */,
+				4C371EF71C9D86640077A8E9 /* ViewController.swift */,
+				4C371EF91C9D86640077A8E9 /* Main.storyboard */,
+				4C371EFC1C9D86640077A8E9 /* Assets.xcassets */,
+				4C371EFE1C9D86640077A8E9 /* LaunchScreen.storyboard */,
+				4C371F011C9D86640077A8E9 /* Info.plist */,
 			);
-			path = hack24;
+			path = Hack24;
 			sourceTree = "<group>";
 		};
-		4C8C70F51C9D4FFB00435764 /* Supporting Files */ = {
+		4C371F091C9D86650077A8E9 /* Hack24Tests */ = {
 			isa = PBXGroup;
 			children = (
-				4C8C70F61C9D4FFB00435764 /* main.m */,
+				4C371F0A1C9D86650077A8E9 /* Hack24Tests.swift */,
+				4C371F0C1C9D86650077A8E9 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = Hack24Tests;
 			sourceTree = "<group>";
 		};
-		4C8C710E1C9D4FFB00435764 /* hack24Tests */ = {
+		4C371F141C9D86650077A8E9 /* Hack24UITests */ = {
 			isa = PBXGroup;
 			children = (
-				4C8C710F1C9D4FFB00435764 /* hack24Tests.m */,
-				4C8C71111C9D4FFB00435764 /* Info.plist */,
+				4C371F151C9D86650077A8E9 /* Hack24UITests.swift */,
+				4C371F171C9D86650077A8E9 /* Info.plist */,
 			);
-			path = hack24Tests;
-			sourceTree = "<group>";
-		};
-		4C8C71191C9D4FFB00435764 /* hack24UITests */ = {
-			isa = PBXGroup;
-			children = (
-				4C8C711A1C9D4FFB00435764 /* hack24UITests.m */,
-				4C8C711C1C9D4FFB00435764 /* Info.plist */,
-			);
-			path = hack24UITests;
+			path = Hack24UITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4C8C70F11C9D4FFB00435764 /* hack24 */ = {
+		4C371EF11C9D86640077A8E9 /* Hack24 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C8C711F1C9D4FFB00435764 /* Build configuration list for PBXNativeTarget "hack24" */;
+			buildConfigurationList = 4C371F1A1C9D86650077A8E9 /* Build configuration list for PBXNativeTarget "Hack24" */;
 			buildPhases = (
-				4C8C70EE1C9D4FFB00435764 /* Sources */,
-				4C8C70EF1C9D4FFB00435764 /* Frameworks */,
-				4C8C70F01C9D4FFB00435764 /* Resources */,
+				4C371EEE1C9D86640077A8E9 /* Sources */,
+				4C371EEF1C9D86640077A8E9 /* Frameworks */,
+				4C371EF01C9D86640077A8E9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = hack24;
-			productName = hack24;
-			productReference = 4C8C70F21C9D4FFB00435764 /* hack24.app */;
+			name = Hack24;
+			productName = Hack24;
+			productReference = 4C371EF21C9D86640077A8E9 /* Hack24.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4C8C710A1C9D4FFB00435764 /* hack24Tests */ = {
+		4C371F051C9D86640077A8E9 /* Hack24Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C8C71221C9D4FFB00435764 /* Build configuration list for PBXNativeTarget "hack24Tests" */;
+			buildConfigurationList = 4C371F1D1C9D86650077A8E9 /* Build configuration list for PBXNativeTarget "Hack24Tests" */;
 			buildPhases = (
-				4C8C71071C9D4FFB00435764 /* Sources */,
-				4C8C71081C9D4FFB00435764 /* Frameworks */,
-				4C8C71091C9D4FFB00435764 /* Resources */,
+				4C371F021C9D86640077A8E9 /* Sources */,
+				4C371F031C9D86640077A8E9 /* Frameworks */,
+				4C371F041C9D86640077A8E9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4C8C710D1C9D4FFB00435764 /* PBXTargetDependency */,
+				4C371F081C9D86640077A8E9 /* PBXTargetDependency */,
 			);
-			name = hack24Tests;
-			productName = hack24Tests;
-			productReference = 4C8C710B1C9D4FFB00435764 /* hack24Tests.xctest */;
+			name = Hack24Tests;
+			productName = Hack24Tests;
+			productReference = 4C371F061C9D86640077A8E9 /* Hack24Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4C8C71151C9D4FFB00435764 /* hack24UITests */ = {
+		4C371F101C9D86650077A8E9 /* Hack24UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C8C71251C9D4FFB00435764 /* Build configuration list for PBXNativeTarget "hack24UITests" */;
+			buildConfigurationList = 4C371F201C9D86650077A8E9 /* Build configuration list for PBXNativeTarget "Hack24UITests" */;
 			buildPhases = (
-				4C8C71121C9D4FFB00435764 /* Sources */,
-				4C8C71131C9D4FFB00435764 /* Frameworks */,
-				4C8C71141C9D4FFB00435764 /* Resources */,
+				4C371F0D1C9D86650077A8E9 /* Sources */,
+				4C371F0E1C9D86650077A8E9 /* Frameworks */,
+				4C371F0F1C9D86650077A8E9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4C8C71181C9D4FFB00435764 /* PBXTargetDependency */,
+				4C371F131C9D86650077A8E9 /* PBXTargetDependency */,
 			);
-			name = hack24UITests;
-			productName = hack24UITests;
-			productReference = 4C8C71161C9D4FFB00435764 /* hack24UITests.xctest */;
+			name = Hack24UITests;
+			productName = Hack24UITests;
+			productReference = 4C371F111C9D86650077A8E9 /* Hack24UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4C8C70EA1C9D4FFB00435764 /* Project object */ = {
+		4C371EEA1C9D86640077A8E9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = MultiPie;
 				TargetAttributes = {
-					4C8C70F11C9D4FFB00435764 = {
+					4C371EF11C9D86640077A8E9 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
-					4C8C710A1C9D4FFB00435764 = {
+					4C371F051C9D86640077A8E9 = {
 						CreatedOnToolsVersion = 7.2.1;
-						TestTargetID = 4C8C70F11C9D4FFB00435764;
+						TestTargetID = 4C371EF11C9D86640077A8E9;
 					};
-					4C8C71151C9D4FFB00435764 = {
+					4C371F101C9D86650077A8E9 = {
 						CreatedOnToolsVersion = 7.2.1;
-						TestTargetID = 4C8C70F11C9D4FFB00435764;
+						TestTargetID = 4C371EF11C9D86640077A8E9;
 					};
 				};
 			};
-			buildConfigurationList = 4C8C70ED1C9D4FFB00435764 /* Build configuration list for PBXProject "hack24" */;
+			buildConfigurationList = 4C371EED1C9D86640077A8E9 /* Build configuration list for PBXProject "Hack24" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -226,37 +212,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 4C8C70E91C9D4FFB00435764;
-			productRefGroup = 4C8C70F31C9D4FFB00435764 /* Products */;
+			mainGroup = 4C371EE91C9D86640077A8E9;
+			productRefGroup = 4C371EF31C9D86640077A8E9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4C8C70F11C9D4FFB00435764 /* hack24 */,
-				4C8C710A1C9D4FFB00435764 /* hack24Tests */,
-				4C8C71151C9D4FFB00435764 /* hack24UITests */,
+				4C371EF11C9D86640077A8E9 /* Hack24 */,
+				4C371F051C9D86640077A8E9 /* Hack24Tests */,
+				4C371F101C9D86650077A8E9 /* Hack24UITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4C8C70F01C9D4FFB00435764 /* Resources */ = {
+		4C371EF01C9D86640077A8E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C8C71051C9D4FFB00435764 /* LaunchScreen.storyboard in Resources */,
-				4C8C71021C9D4FFB00435764 /* Assets.xcassets in Resources */,
-				4C8C71001C9D4FFB00435764 /* Main.storyboard in Resources */,
+				4C371F001C9D86640077A8E9 /* LaunchScreen.storyboard in Resources */,
+				4C371EFD1C9D86640077A8E9 /* Assets.xcassets in Resources */,
+				4C371EFB1C9D86640077A8E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C8C71091C9D4FFB00435764 /* Resources */ = {
+		4C371F041C9D86640077A8E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C8C71141C9D4FFB00435764 /* Resources */ = {
+		4C371F0F1C9D86650077A8E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -266,60 +252,59 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4C8C70EE1C9D4FFB00435764 /* Sources */ = {
+		4C371EEE1C9D86640077A8E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C8C70FD1C9D4FFB00435764 /* ViewController.m in Sources */,
-				4C8C70FA1C9D4FFB00435764 /* AppDelegate.m in Sources */,
-				4C8C70F71C9D4FFB00435764 /* main.m in Sources */,
+				4C371EF81C9D86640077A8E9 /* ViewController.swift in Sources */,
+				4C371EF61C9D86640077A8E9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C8C71071C9D4FFB00435764 /* Sources */ = {
+		4C371F021C9D86640077A8E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C8C71101C9D4FFB00435764 /* hack24Tests.m in Sources */,
+				4C371F0B1C9D86650077A8E9 /* Hack24Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C8C71121C9D4FFB00435764 /* Sources */ = {
+		4C371F0D1C9D86650077A8E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C8C711B1C9D4FFB00435764 /* hack24UITests.m in Sources */,
+				4C371F161C9D86650077A8E9 /* Hack24UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4C8C710D1C9D4FFB00435764 /* PBXTargetDependency */ = {
+		4C371F081C9D86640077A8E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4C8C70F11C9D4FFB00435764 /* hack24 */;
-			targetProxy = 4C8C710C1C9D4FFB00435764 /* PBXContainerItemProxy */;
+			target = 4C371EF11C9D86640077A8E9 /* Hack24 */;
+			targetProxy = 4C371F071C9D86640077A8E9 /* PBXContainerItemProxy */;
 		};
-		4C8C71181C9D4FFB00435764 /* PBXTargetDependency */ = {
+		4C371F131C9D86650077A8E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4C8C70F11C9D4FFB00435764 /* hack24 */;
-			targetProxy = 4C8C71171C9D4FFB00435764 /* PBXContainerItemProxy */;
+			target = 4C371EF11C9D86640077A8E9 /* Hack24 */;
+			targetProxy = 4C371F121C9D86650077A8E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4C8C70FE1C9D4FFB00435764 /* Main.storyboard */ = {
+		4C371EF91C9D86640077A8E9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4C8C70FF1C9D4FFB00435764 /* Base */,
+				4C371EFA1C9D86640077A8E9 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		4C8C71031C9D4FFB00435764 /* LaunchScreen.storyboard */ = {
+		4C371EFE1C9D86640077A8E9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4C8C71041C9D4FFB00435764 /* Base */,
+				4C371EFF1C9D86640077A8E9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -327,7 +312,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4C8C711D1C9D4FFB00435764 /* Debug */ = {
+		4C371F181C9D86650077A8E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -367,11 +352,12 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4C8C711E1C9D4FFB00435764 /* Release */ = {
+		4C371F191C9D86650077A8E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -409,72 +395,72 @@
 			};
 			name = Release;
 		};
-		4C8C71201C9D4FFB00435764 /* Debug */ = {
+		4C371F1B1C9D86650077A8E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = hack24/Info.plist;
+				INFOPLIST_FILE = Hack24/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MultiPie.hack24;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MultiPie.Hack24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		4C8C71211C9D4FFB00435764 /* Release */ = {
+		4C371F1C1C9D86650077A8E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = hack24/Info.plist;
+				INFOPLIST_FILE = Hack24/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MultiPie.hack24;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MultiPie.Hack24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		4C8C71231C9D4FFB00435764 /* Debug */ = {
+		4C371F1E1C9D86650077A8E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = hack24Tests/Info.plist;
+				INFOPLIST_FILE = Hack24Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MultiPie.hack24Tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MultiPie.Hack24Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hack24.app/hack24";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hack24.app/Hack24";
 			};
 			name = Debug;
 		};
-		4C8C71241C9D4FFB00435764 /* Release */ = {
+		4C371F1F1C9D86650077A8E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = hack24Tests/Info.plist;
+				INFOPLIST_FILE = Hack24Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MultiPie.hack24Tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MultiPie.Hack24Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hack24.app/hack24";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hack24.app/Hack24";
 			};
 			name = Release;
 		};
-		4C8C71261C9D4FFB00435764 /* Debug */ = {
+		4C371F211C9D86650077A8E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = hack24UITests/Info.plist;
+				INFOPLIST_FILE = Hack24UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MultiPie.hack24UITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MultiPie.Hack24UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = hack24;
+				TEST_TARGET_NAME = Hack24;
 				USES_XCTRUNNER = YES;
 			};
 			name = Debug;
 		};
-		4C8C71271C9D4FFB00435764 /* Release */ = {
+		4C371F221C9D86650077A8E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = hack24UITests/Info.plist;
+				INFOPLIST_FILE = Hack24UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MultiPie.hack24UITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MultiPie.Hack24UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = hack24;
+				TEST_TARGET_NAME = Hack24;
 				USES_XCTRUNNER = YES;
 			};
 			name = Release;
@@ -482,40 +468,40 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C8C70ED1C9D4FFB00435764 /* Build configuration list for PBXProject "hack24" */ = {
+		4C371EED1C9D86640077A8E9 /* Build configuration list for PBXProject "Hack24" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C8C711D1C9D4FFB00435764 /* Debug */,
-				4C8C711E1C9D4FFB00435764 /* Release */,
+				4C371F181C9D86650077A8E9 /* Debug */,
+				4C371F191C9D86650077A8E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C8C711F1C9D4FFB00435764 /* Build configuration list for PBXNativeTarget "hack24" */ = {
+		4C371F1A1C9D86650077A8E9 /* Build configuration list for PBXNativeTarget "Hack24" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C8C71201C9D4FFB00435764 /* Debug */,
-				4C8C71211C9D4FFB00435764 /* Release */,
+				4C371F1B1C9D86650077A8E9 /* Debug */,
+				4C371F1C1C9D86650077A8E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		4C8C71221C9D4FFB00435764 /* Build configuration list for PBXNativeTarget "hack24Tests" */ = {
+		4C371F1D1C9D86650077A8E9 /* Build configuration list for PBXNativeTarget "Hack24Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C8C71231C9D4FFB00435764 /* Debug */,
-				4C8C71241C9D4FFB00435764 /* Release */,
+				4C371F1E1C9D86650077A8E9 /* Debug */,
+				4C371F1F1C9D86650077A8E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		4C8C71251C9D4FFB00435764 /* Build configuration list for PBXNativeTarget "hack24UITests" */ = {
+		4C371F201C9D86650077A8E9 /* Build configuration list for PBXNativeTarget "Hack24UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C8C71261C9D4FFB00435764 /* Debug */,
-				4C8C71271C9D4FFB00435764 /* Release */,
+				4C371F211C9D86650077A8E9 /* Debug */,
+				4C371F221C9D86650077A8E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4C8C70EA1C9D4FFB00435764 /* Project object */;
+	rootObject = 4C371EEA1C9D86640077A8E9 /* Project object */;
 }

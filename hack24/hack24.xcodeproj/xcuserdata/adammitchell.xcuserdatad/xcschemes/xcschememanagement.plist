@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>hack24.xcscheme</key>
+		<key>Hack24.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4C8C70F11C9D4FFB00435764</key>
+		<key>4C371EF11C9D86640077A8E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4C8C710A1C9D4FFB00435764</key>
+		<key>4C371F051C9D86640077A8E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4C8C71151C9D4FFB00435764</key>
+		<key>4C371F101C9D86650077A8E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
