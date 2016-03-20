@@ -15,6 +15,7 @@ html, body{
     top: 0;
     left: 0;
     right: 0;
+    z-index: 2;
 }
 
 .logo {
@@ -68,6 +69,40 @@ html, body{
     overflow: hidden;
     vertical-align: top;
     cursor: pointer;
+}
+.edit-mode .notice-board:not(.notice-editing){
+    filter: grayscale(90%);
+    -webkit-filter: grayscale(90%);
+    opacity: 0.4;
+    overflow: visible;
+    pointer-events: none;
+    transition: filter 500ms, opacity 500ms;
+    -webkit-transition : -webkit-filter 500ms, opacity 500ms;
+}
+.notice-editing{
+    cursor: auto;
+    z-index: 1;
+}
+.notice-editing table{
+    margin: 0.5em;
+    font-weight: 200;
+    color: black;
+    width: calc(100% - 1em);
+}
+.notice-editing th{
+    font-weight: 200;
+    text-align: right;
+}
+.notice-editing input{
+    width: 100%;
+}
+.notice-editing footer{
+    vertical-align: bottom;
+    text-align: right;
+    margin: 0.5em;
+}
+.notice-editing footer button i{
+    vertical-align: middle;
 }
 .notice-board-action{
     color: #fe2e4d;   

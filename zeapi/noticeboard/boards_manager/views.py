@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from boards import models as board_models
 
 def index(request):
-    board_ids = list(board_models.NoticeBoardOwner.objects.filter(user=request.user).values_list('pk', flat=True))
+    board_ids = list(board_models.NoticeBoardOwner.objects.filter(user=request.user).values_list('board_id', flat=True))
     boards = board_models.NoticeBoard.objects.filter(pk__in=board_ids).all()
 
     return render(request, 'notice-board-list.html', { 'boards': boards })
