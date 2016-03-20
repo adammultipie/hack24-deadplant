@@ -90,6 +90,7 @@ def post_message(request, noticeboard_pk):
     post = models.Post()
     post.creator = request.user
     post.title = data.get('title', 'Untitled')
+    post.text = data.get('text', '')
     post.board = board
     for file_name in request.FILES:
         if request.FILES[file_name]:
