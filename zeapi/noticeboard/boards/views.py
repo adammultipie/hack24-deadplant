@@ -21,6 +21,59 @@ def messages(request, noticeboard_pk):
     serializer = serializers.PostSerializer(posts, many=True, context={'request': request})
     return Response(serializer.data)
 
+@api_view(['POST'])
+@authentication_classes((SessionAuthentication, BasicAuthentication, TokenAuthentication))
+@permission_classes((IsAuthenticated,))
+def create_new_board(request):
+    data = request.data
+    if not data:
+        try:
+            data = json.loads(request.body)
+        except ValueError:
+            data = {}
+    board = models.NoticeBoard()
+    board.name = data.get('name', 'Untitled')
+    triggers = data.get('triggers', [])
+    board.save()
+
+    bo = models.NoticeBoardOwner()
+    bo.board_id = board.pk
+    bo.user_id = request.user.pk
+    bo.save()
+    for trigger_info in triggers:
+        trigger = models.Triggers()
+        trigger.board_id = board.pk
+        trigger.uuid = trigger_info.get('uuid')
+        trigger.major = trigger_info.get('major')
+        trigger.minor = trigger_info.get('minor')
+        trigger.save()
+    return Response({'status': 'success', 'pk': board.pk,
+                     'url':  reverse('view-notice-board',
+                                     kwargs={'notice_board_id': board.pk},
+                                     request=request)})
+
+@api_view(['POST'])
+@authentication_classes((SessionAuthentication, BasicAuthentication, TokenAuthentication))
+@permission_classes((IsAuthenticated,))
+def create_board_trigger(request, noticeboard_pk):
+    data = request.data
+    if not data:
+        try:
+            data = json.loads(request.body)
+        except ValueError:
+            data = {}
+    board = get_object_or_404(models.NoticeBoard, pk=noticeboard_pk)
+    trigger = models.Triggers()
+    trigger.board = board
+    trigger.uuid = data.get('uuid')
+    trigger.major = data.get('major')
+    trigger.minor = data.get('minor')
+    trigger.save()
+    return Response({'status': 'success',
+                     'next': reverse('view-notice-board',
+                                     kwargs={'notice_board_id': noticeboard_pk},
+                                     request=request)})
+
 @api_view(['PUT', 'POST'])
 @authentication_classes((SessionAuthentication, BasicAuthentication, TokenAuthentication))
 @permission_classes((IsAuthenticated,))
@@ -56,6 +109,7 @@ def noticeboard_by_ibeacon(request):
             data = json.loads(request.body)
         except ValueError:
             data = {}
+    print(data)
     beacons = data.get('beacons', [])
 
     q_filter = Q(board=None)
@@ -64,12 +118,11 @@ def noticeboard_by_ibeacon(request):
         major = beacon.get('major')
         minor = beacon.get('minor')
         q_filter = q_filter | (Q(uuid=uuid) & Q(major=major) & Q(minor=minor))
-    if beacons:
-        triggers = triggers.filter(q_filter).all()
-        ids = []
-        for trigger in triggers:
-            ids.append(trigger.board_id)
-        boards = boards.filter(pk__in=ids)
+    triggers = triggers.filter(q_filter).all()
+    ids = []
+    for trigger in triggers:
+        ids.append(trigger.board_id)
+    boards = boards.filter(pk__in=ids)
 
 
     boards = boards.all()

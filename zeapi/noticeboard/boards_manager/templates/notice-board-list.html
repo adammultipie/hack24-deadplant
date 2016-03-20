@@ -25,7 +25,7 @@
     </table>
 </header>
 
-<article class="notice-board">
+<article class="notice-board notice-board-new-board">
     <p class="notice-board-action">
     Create a new notice board
     </p>
@@ -49,12 +49,78 @@
     {% endwith %}
  </article>
 {% endfor %}
+<script type="text/html" id="new-notice-board">
+
+<article style="opacity: 0; width: 0px;" class="notice-board notice-editing">
+    <header>
+        <input name="notice-name" value="Untitled">
+    </header>
+    <table>
+        <tbody>
+            <tr>
+                <th>Beacon ID: </th>
+                <td><input name="notice-uuid" value="96B0EF22-19B2-4EBF-9CD1-868FA48DFBD8"></td>
+            </tr>
+            <tr>
+                <th>Major: </th>
+                <td><input name="notice-major" type="number" value="1"></td>
+            </tr>
+            <tr>
+                <th>Minor: </th>
+                <td><input name="notice-minor" type="number" value="1"></td>
+            </tr>
+        </tbody>
+    </table>
+    <footer>
+        <button class="cancel-button"><i class="material-icons">close</i> Cancel</button>
+        <button class="accept-button"><i class="material-icons">check</i> Accept changes</button>
+    </footer>
+</article>
+</script>
 <script>
+    function createNew(){
+        $('body').addClass('edit-mode');
+
+        $('.notice-board-new-board').after($('#new-notice-board').html());
+        $('.notice-editing').animate({'width': '300px', opacity: 1.0}, 500);
+    }
     $(document).ready(function(){
         $('body').on('click', '.notice-board', function(){
+            if($(this).hasClass('notice-editing')){
+                return;
+            }
+            if($(this).hasClass('notice-board-new-board')){
+                createNew();
+                return;
+            }
             var url = $(this).data('url');
             document.location.href = url;
-        })
+        }).on('click', '.cancel-button', function(){
+            $('.notice-editing').remove();
+            $('body').removeClass('edit-mode');
+        }).on('click', '.accept-button', function(){
+            $.ajax('{% url "create-new-board" %}', {
+                type: 'POST',
+                contentType: 'application/json',
+                dataType: 'json',
+                processData: false,
+                data: JSON.stringify({
+                    'name': $('input[name="notice-name"]').val(),
+                    'triggers': [{
+                        'uuid': $('input[name="notice-uuid"]').val(),
+                        'major': $('input[name="notice-major"]').val(),
+                        'minor': $('input[name="notice-minor"]').val()
+                    }]
+                }),
+                success: function(data, textStatus, jqXHR) {
+                    document.location.href = data.url;
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    // self.showError(jqXHR.responseText, jqXHR.status);            
+                }
+            });
+        });
+
     });
 </script>
 {% endblock %}

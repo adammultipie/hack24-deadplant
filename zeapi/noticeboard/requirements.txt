@@ -1,0 +1,8 @@
+Django==1.9.4
+Pillow==3.1.1
+Wand==0.4.2
+django-jsonfield==0.9.19
+djangorestframework==3.3.3
+jsonfield==1.0.3
+six==1.10.0
+wsgiref==0.1.2
