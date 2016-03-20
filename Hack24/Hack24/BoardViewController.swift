@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Alamofire
 import AlamofireImage
+import KYDrawerController
 
 private let standardMargin:CGFloat = 16;
 
@@ -30,6 +31,7 @@ class BoardViewController: UIViewController {
         scrollView.delegate = self
         scrollView.minimumZoomScale = 0.1
         scrollView.maximumZoomScale = 1;
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "home_icon")?.imageWithRenderingMode(.AlwaysOriginal), style: .Plain, target: self, action: Selector("openDrawer"))
         
     }
     
@@ -40,6 +42,12 @@ class BoardViewController: UIViewController {
     
     override func viewWillDisappear(animated: Bool) {
         NSNotificationCenter.defaultCenter().removeObserver(self);
+    }
+    
+    func openDrawer() {
+        if let drawer = self.parentViewController?.parentViewController as? KYDrawerController {
+            drawer.setDrawerState(.Opened, animated: true);
+        }
     }
     
     func refresh() {
@@ -63,6 +71,13 @@ class BoardViewController: UIViewController {
             for var i = 0; i < messages.count; i++ {
                 let view = CardView();
                 let message = messages[i];
+                
+                view.layer.masksToBounds = false;
+                view.layer.shadowOffset = CGSizeMake(-3.75, 5);
+                view.layer.shadowRadius = 5;
+                view.layer.shadowOpacity = 0.5;
+                view.layer.shadowColor = UIColor.blackColor().CGColor
+                
                 view.clickHandler = { Void in
                     if let fileUrl = message.file, let url = NSURL(string: fileUrl) {
                         self.presentAssetInterface(url);
