@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'jsonfield',
-    'boards'
+    'boards',
+    'boards_manager'
 ]
 
 MIDDLEWARE_CLASSES = [

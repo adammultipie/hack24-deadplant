@@ -1,0 +1,22 @@
+{% load staticfiles %}
+
+<html>
+    <head> 
+        <title>
+        </title>
+        <script src="{% static "jquery.js" %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static "style.css" %}" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+    {% block "body" %}
+    {% endblock %}
+    </body>
+    <script>
+        $(document).ready(function(){
+            $('.page-header').on('click', '.logo', function(){
+                document.location.href = '{% url "index" %}';
+            });
+        });
+    </script>
+</html>
