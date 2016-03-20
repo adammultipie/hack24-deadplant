@@ -13,69 +13,40 @@ import AlamofireImage
 
 private let standardMargin:CGFloat = 16;
 
-class Tile {
-    var rect:CGRect = CGRect()
-    let view:UIView!
-    
-    var rightTile:Tile? = nil
-    var leftTile:Tile? = nil
-    var aboveTile:Tile? = nil
-    var belowTile:Tile? = nil
-    
-    private init(view:UIView) {
-        self.view = view;
-    }
-    
-    private init(view:UIView, tile:Tile) {
-        self.view = view;
-        rect.origin.x = tile.rect.origin.x;
-        rect.origin.y = tile.rect.origin.y;
-        rect.size.width = tile.rect.width;
-        rect.size.height = tile.rect.height;
-    }
-    
-    static func start(view:UIView) -> Tile {
-        return Tile(view: view)
-    }
-    
-    func right(view:UIView) -> Tile {
-        let tile = Tile(view: view, tile: self);
-        tile.rect.origin.x = self.rect.origin.x + self.rect.size.width;
-        tile.rect.origin.y = self.rect.origin.y;
-        self.rightTile = tile;
-        tile.leftTile = self;
-        tile.aboveTile = self.aboveTile?.rightTile
-        self.aboveTile?.rightTile?.belowTile = tile
-        return tile;
-    }
-    
-    func bottom(view:UIView) -> Tile {
-        let tile = Tile(view: view, tile: self);
-        tile.rect.origin.x = self.rect.origin.x;
-        tile.rect.origin.y = self.rect.origin.y + self.rect.size.height
-        self.belowTile = tile;
-        tile.aboveTile = self;
-        return tile
-    }
-}
-
 class BoardViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var containView: UIView!
     
+    var selectedBoard:Board? {
+        didSet {
+            refresh()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad();
-        self.title = "Curiosity"
+        self.title = AppDelegate.boardsInteractor.getSelectedBoard().name
         scrollView.delegate = self
         scrollView.minimumZoomScale = 0.1
         scrollView.maximumZoomScale = 1;
         
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated);
-        AppDelegate.boardsInteractor.getBoardMessages("1").responseJSON { (response:Response<AnyObject, NSError>) -> Void in
+    override func viewWillAppear(animated: Bool) {
+        refresh()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("refresh"), name: NBNewBoardSelected, object: nil)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().removeObserver(self);
+    }
+    
+    func refresh() {
+        let board = AppDelegate.boardsInteractor.getSelectedBoard()
+        let id = board.id
+        self.title = AppDelegate.boardsInteractor.getSelectedBoard().name
+        AppDelegate.boardsInteractor.getBoardMessages(id).responseJSON { (response:Response<AnyObject, NSError>) -> Void in
             print(response.result.value)
             var messages = [Notice]()
             if let array = response.result.value as? NSArray {
@@ -101,7 +72,7 @@ class BoardViewController: UIViewController {
                 view.imageView.image = nil;
                 view.contentsLabel.text = message.text
                 if let imageFile = message.thumbnail {
-                   // request(imageFile).
+                    // request(imageFile).
                     request(.GET, imageFile).responseImage(completionHandler: { (response:Response<Image, NSError>) -> Void in
                         view.imageView.image = response.result.value
                     })
@@ -133,7 +104,6 @@ class BoardViewController: UIViewController {
             }
             self.layoutViews(tiles);
         }
-        
     }
     
     private func addTile(tile:Tile?) {
@@ -246,5 +216,51 @@ extension BoardViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         
+    }
+}
+
+class Tile {
+    var rect:CGRect = CGRect()
+    let view:UIView!
+    
+    var rightTile:Tile? = nil
+    var leftTile:Tile? = nil
+    var aboveTile:Tile? = nil
+    var belowTile:Tile? = nil
+    
+    private init(view:UIView) {
+        self.view = view;
+    }
+    
+    private init(view:UIView, tile:Tile) {
+        self.view = view;
+        rect.origin.x = tile.rect.origin.x;
+        rect.origin.y = tile.rect.origin.y;
+        rect.size.width = tile.rect.width;
+        rect.size.height = tile.rect.height;
+    }
+    
+    static func start(view:UIView) -> Tile {
+        return Tile(view: view)
+    }
+    
+    func right(view:UIView) -> Tile {
+        let tile = Tile(view: view, tile: self);
+        tile.rect.origin.x = self.rect.origin.x + self.rect.size.width;
+        tile.rect.origin.y = self.rect.origin.y;
+        self.rightTile = tile;
+        tile.leftTile = self;
+        tile.aboveTile = self.aboveTile?.rightTile
+        self.aboveTile?.rightTile?.belowTile = tile
+        return tile;
+    }
+    
+    func bottom(view:UIView) -> Tile {
+        let tile = Tile(view: view, tile: self);
+        tile.rect.origin.x = self.rect.origin.x;
+        tile.rect.origin.y = self.rect.origin.y + self.rect.size.height
+        self.belowTile = tile;
+        tile.aboveTile = self;
+        return tile
     }
 }

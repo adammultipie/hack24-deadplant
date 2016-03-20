@@ -10,12 +10,12 @@ import Foundation
 
 class Board:JSONRepresentiable {
     
-    private let id:String;
-    private let name:String;
+    let id:String;
+    let name:String;
     
     required init?(json: NSDictionary) {
         guard
-            let pk = json["pk"] as? String,
+            let pk = json["pk"] as? Int,
             let name = json["name"] as? String
             
             else {
@@ -24,7 +24,7 @@ class Board:JSONRepresentiable {
                 return nil
         }
         
-        self.id = pk;
+        self.id = "\(pk)";
         self.name = name;
     }
     
