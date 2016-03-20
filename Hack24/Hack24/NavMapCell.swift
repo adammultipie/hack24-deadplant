@@ -17,5 +17,13 @@ class NavMapCell: UITableViewCell {
         super.awakeFromNib()
         self.mapView.showsUserLocation = true
     }
+    
+    override func setHighlighted(highlighted: Bool, animated: Bool) {
+        
+    }
+    
+    override func setSelected(selected: Bool, animated: Bool) {
+        
+    }
 
 }

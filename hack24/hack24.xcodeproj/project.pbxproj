@@ -15,17 +15,12 @@
 		4C245B3B1C9E2FEE00C21663 /* NavHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C245B3A1C9E2FEE00C21663 /* NavHeaderCell.swift */; };
 		4C245B3E1C9E300800C21663 /* NavBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C245B3D1C9E300800C21663 /* NavBoardCell.swift */; };
 		4C245B401C9E330400C21663 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C245B3F1C9E330400C21663 /* MapKit.framework */; };
-		4C245B421C9E46E400C21663 /* NBDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C245B411C9E46E400C21663 /* NBDrawerViewController.swift */; };
+		4C245B441C9E8A3D00C21663 /* NavAlertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C245B431C9E8A3D00C21663 /* NavAlertCell.swift */; };
 		4C371EF61C9D86640077A8E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371EF51C9D86640077A8E9 /* AppDelegate.swift */; };
-		4C371EF81C9D86640077A8E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371EF71C9D86640077A8E9 /* ViewController.swift */; };
 		4C371EFD1C9D86640077A8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C371EFC1C9D86640077A8E9 /* Assets.xcassets */; };
 		4C371F001C9D86640077A8E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C371EFE1C9D86640077A8E9 /* LaunchScreen.storyboard */; };
 		4C371F0B1C9D86650077A8E9 /* Hack24Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371F0A1C9D86650077A8E9 /* Hack24Tests.swift */; };
 		4C371F161C9D86650077A8E9 /* Hack24UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371F151C9D86650077A8E9 /* Hack24UITests.swift */; };
-		4C371F281C9D8A600077A8E9 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371F231C9D8A600077A8E9 /* AddItemViewController.swift */; };
-		4C371F291C9D8A600077A8E9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371F241C9D8A600077A8E9 /* Item.swift */; };
-		4C371F2A1C9D8A600077A8E9 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371F251C9D8A600077A8E9 /* ItemCell.swift */; };
-		4C371F2B1C9D8A600077A8E9 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371F261C9D8A600077A8E9 /* ItemsViewController.swift */; };
 		4C371F2C1C9D8A600077A8E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C371F271C9D8A600077A8E9 /* Main.storyboard */; };
 		4C371F2E1C9D8AFB0077A8E9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C371F2D1C9D8AFB0077A8E9 /* CoreLocation.framework */; };
 		4C371F301C9D8BB80077A8E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C371F2F1C9D8BB80077A8E9 /* Foundation.framework */; };
@@ -67,10 +62,9 @@
 		4C245B3A1C9E2FEE00C21663 /* NavHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavHeaderCell.swift; sourceTree = "<group>"; };
 		4C245B3D1C9E300800C21663 /* NavBoardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBoardCell.swift; sourceTree = "<group>"; };
 		4C245B3F1C9E330400C21663 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		4C245B411C9E46E400C21663 /* NBDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBDrawerViewController.swift; sourceTree = "<group>"; };
+		4C245B431C9E8A3D00C21663 /* NavAlertCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavAlertCell.swift; sourceTree = "<group>"; };
 		4C371EF21C9D86640077A8E9 /* Hack24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hack24.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C371EF51C9D86640077A8E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C371EF71C9D86640077A8E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4C371EFC1C9D86640077A8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C371EFF1C9D86640077A8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C371F011C9D86640077A8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,10 +74,6 @@
 		4C371F111C9D86650077A8E9 /* Hack24UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hack24UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C371F151C9D86650077A8E9 /* Hack24UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hack24UITests.swift; sourceTree = "<group>"; };
 		4C371F171C9D86650077A8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C371F231C9D8A600077A8E9 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
-		4C371F241C9D8A600077A8E9 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		4C371F251C9D8A600077A8E9 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
-		4C371F261C9D8A600077A8E9 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		4C371F271C9D8A600077A8E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4C371F2D1C9D8AFB0077A8E9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4C371F2F1C9D8BB80077A8E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -146,6 +136,7 @@
 				4C245B381C9E2FDD00C21663 /* NavMapCell.swift */,
 				4C245B3A1C9E2FEE00C21663 /* NavHeaderCell.swift */,
 				4C245B3D1C9E300800C21663 /* NavBoardCell.swift */,
+				4C245B431C9E8A3D00C21663 /* NavAlertCell.swift */,
 			);
 			name = UITableViewCells;
 			sourceTree = "<group>";
@@ -182,13 +173,8 @@
 				4C245B301C9E111A00C21663 /* Views */,
 				4C9F8DD01C9DBE670016AEEB /* Extensions */,
 				4C9F8DC91C9DBC320016AEEB /* Model */,
-				4C371F231C9D8A600077A8E9 /* AddItemViewController.swift */,
-				4C371F241C9D8A600077A8E9 /* Item.swift */,
-				4C371F251C9D8A600077A8E9 /* ItemCell.swift */,
-				4C371F261C9D8A600077A8E9 /* ItemsViewController.swift */,
 				4C371F271C9D8A600077A8E9 /* Main.storyboard */,
 				4C371EF51C9D86640077A8E9 /* AppDelegate.swift */,
-				4C371EF71C9D86640077A8E9 /* ViewController.swift */,
 				4C371EFC1C9D86640077A8E9 /* Assets.xcassets */,
 				4C371EFE1C9D86640077A8E9 /* LaunchScreen.storyboard */,
 				4C371F011C9D86640077A8E9 /* Info.plist */,
@@ -198,7 +184,6 @@
 				4C9F8DC71C9DAD910016AEEB /* BoardViewController.swift */,
 				4C9F8DD31C9DCCBC0016AEEB /* GlobalFunc.swift */,
 				4C245B351C9E2E1600C21663 /* NavigationDrawerViewController.swift */,
-				4C245B411C9E46E400C21663 /* NBDrawerViewController.swift */,
 			);
 			path = Hack24;
 			sourceTree = "<group>";
@@ -441,13 +426,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C9F8DCD1C9DBC920016AEEB /* JSONRepresentable.swift in Sources */,
-				4C371F291C9D8A600077A8E9 /* Item.swift in Sources */,
 				4C245B3B1C9E2FEE00C21663 /* NavHeaderCell.swift in Sources */,
-				4C245B421C9E46E400C21663 /* NBDrawerViewController.swift in Sources */,
 				4C245B391C9E2FDD00C21663 /* NavMapCell.swift in Sources */,
 				4C9F8DCF1C9DBDD40016AEEB /* Notice.swift in Sources */,
-				4C371F2B1C9D8A600077A8E9 /* ItemsViewController.swift in Sources */,
-				4C371EF81C9D86640077A8E9 /* ViewController.swift in Sources */,
+				4C245B441C9E8A3D00C21663 /* NavAlertCell.swift in Sources */,
 				4C371F341C9D969C0077A8E9 /* Config.swift in Sources */,
 				4C9F8DCB1C9DBC7A0016AEEB /* Board.swift in Sources */,
 				4C371F361C9D97370077A8E9 /* BeaconInteractor.swift in Sources */,
@@ -455,9 +437,7 @@
 				4C245B361C9E2E1600C21663 /* NavigationDrawerViewController.swift in Sources */,
 				4C371F381C9D9E140077A8E9 /* BoardInteractor.swift in Sources */,
 				4C9F8DD41C9DCCBC0016AEEB /* GlobalFunc.swift in Sources */,
-				4C371F281C9D8A600077A8E9 /* AddItemViewController.swift in Sources */,
 				4C9F8DD21C9DBE820016AEEB /* UIColor+Extensions.swift in Sources */,
-				4C371F2A1C9D8A600077A8E9 /* ItemCell.swift in Sources */,
 				4C245B321C9E117D00C21663 /* CardView.swift in Sources */,
 				4C245B3E1C9E300800C21663 /* NavBoardCell.swift in Sources */,
 				4C9F8DC81C9DAD910016AEEB /* BoardViewController.swift in Sources */,

@@ -13,4 +13,10 @@ class NavBoardCell: UITableViewCell {
 
     @IBOutlet weak var label: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.selectedBackgroundView = UIView()
+        self.selectedBackgroundView?.backgroundColor = UIColor.watermelonPink()
+    }
+    
 }

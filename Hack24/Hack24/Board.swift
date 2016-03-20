@@ -12,6 +12,7 @@ class Board:JSONRepresentiable {
     
     let id:String;
     let name:String;
+    var alerts = [Notice]()
     
     required init?(json: NSDictionary) {
         guard
@@ -26,6 +27,15 @@ class Board:JSONRepresentiable {
         
         self.id = "\(pk)";
         self.name = name;
+        if let noticesArray = json["alerts"] as? NSArray {
+            for element in noticesArray {
+                if let dict = element as? NSDictionary {
+                    if let notice = Notice(json: dict) {
+                        alerts.append(notice)
+                    }
+                }
+            }
+        }
     }
     
 }

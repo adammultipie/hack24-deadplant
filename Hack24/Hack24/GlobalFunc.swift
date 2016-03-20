@@ -19,11 +19,3 @@ public func constraint(item view1: AnyObject, attribute attr1: NSLayoutAttribute
     constraint.priority = priority
     return constraint
 }
-
-public func notifyCloseDrawer() {
-    NSNotificationCenter.defaultCenter().postNotificationName(NBCloseDrawer, object: nil)
-}
-
-public func notifyOpenDrawer() {
-    NSNotificationCenter.defaultCenter().postNotificationName(NBOpenDrawer, object: nil);
-}

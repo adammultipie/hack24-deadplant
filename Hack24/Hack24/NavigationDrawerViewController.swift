@@ -48,6 +48,18 @@ class NavigationDrawerViewController: UIViewController {
         }
     }
     
+    func getAlerts() -> [String] {
+        var alerts = [String]()
+        for board in self.boards {
+            for alert in board.alerts {
+                if let title = alert.title {
+                     alerts.append(title)
+                }
+            }
+        }
+        return alerts
+    }
+    
 }
 
 extension NavigationDrawerViewController: UITableViewDataSource {
@@ -60,12 +72,12 @@ extension NavigationDrawerViewController: UITableViewDataSource {
         if section == 0 {
             return 1
         } else if section == 1 {
+            return getAlerts().count
+        } else if section == 2 {
             if boards.count == 0 {
                 return 0
             }
             return boards.count + 1
-        } else if section == 2 {
-            return 0
         }
         return 0
     }
@@ -76,16 +88,27 @@ extension NavigationDrawerViewController: UITableViewDataSource {
             let mapCell = tableView.dequeueReusableCellWithIdentifier("map") as! NavMapCell
             mapCell.mapView.delegate = self;
             cell = mapCell;
-        } else {
+        } else if indexPath.section == 2 {
             if indexPath.row == 0 {
                 cell = tableView.dequeueReusableCellWithIdentifier("header") as! NavHeaderCell
             } else {
                 let boardCell = tableView.dequeueReusableCellWithIdentifier("board") as! NavBoardCell
                 let board = self.boards[indexPath.row-1];
+                let selectedBoard = AppDelegate.boardsInteractor.getSelectedBoard();
+                if board.id == selectedBoard.id {
+                    boardCell.label.textColor = UIColor.watermelonGreen()
+                } else {
+                    boardCell.label.textColor = UIColor.blackColor()
+                }
                 boardCell.label.text = board.name
                 cell = boardCell
             }
             
+        } else {
+            let alert = getAlerts()[indexPath.row]
+            let alertCell = tableView.dequeueReusableCellWithIdentifier("alert") as! NavAlertCell
+            cell = alertCell
+            alertCell.label.text = alert
         }
         return cell;
     }
@@ -127,6 +150,8 @@ extension NavigationDrawerViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 1 && indexPath.row > 0 {
+            tableView.deselectRowAtIndexPath(indexPath, animated: true);
+            tableView.reloadData()
             let board = self.boards[indexPath.row - 1];
             AppDelegate.boardsInteractor.selectNewBoard(board)
             if let drawer = self.parentViewController as? KYDrawerController {
