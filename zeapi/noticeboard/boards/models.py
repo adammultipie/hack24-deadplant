@@ -42,6 +42,7 @@ class Post(models.Model):
     thumbnail = models.ImageField()
     text = models.TextField()
     file = models.FileField()
+
     def create_thumbnail(self):
         if self.file == '':
             return
@@ -70,3 +71,4 @@ class Post(models.Model):
 def create_auth_token(sender, instance=None, created=False, **kwargs):
     if created:
         Token.objects.create(user=instance)
+
