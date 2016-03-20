@@ -4,17 +4,6 @@ from rest_framework.reverse import reverse
 
 from boards import models
 
-class NoticeBoardSerializer(serializers.ModelSerializer):
-    messages = serializers.SerializerMethodField(source='pk')
-
-    def get_messages(self, obj):
-        return reverse('board-messages',
-                       kwargs={'noticeboard_pk': obj.pk},
-                       request=self.context['request'])
-    class Meta:
-        model = models.NoticeBoard
-        fields = ('name', 'pk', 'messages')
-
 
 class PostSerializer(serializers.ModelSerializer):
     file = serializers.SerializerMethodField()
@@ -32,4 +21,20 @@ class PostSerializer(serializers.ModelSerializer):
         return self.context['request'].build_absolute_uri(obj.thumbnail.url)
     class Meta:
         model = models.Post
-        fields = ('pk', 'title', 'file', 'created', 'author', 'text', 'thumb')
+        fields = ('pk', 'title', 'file', 'created', 'author', 'text', 'thumb', 'is_alert')
+
+
+class NoticeBoardSerializer(serializers.ModelSerializer):
+    messages = serializers.SerializerMethodField(source='pk')
+    alerts = serializers.SerializerMethodField(source='pk')
+
+    def get_alerts(self, obj):
+        serializer = PostSerializer(models.Post.objects.filter(is_alert=True, board_id=obj.pk).all(), many=True, context={'request': self.context['request']})
+        return serializer.data
+    def get_messages(self, obj):
+        return reverse('board-messages',
+                       kwargs={'noticeboard_pk': obj.pk},
+                       request=self.context['request'])
+    class Meta:
+        model = models.NoticeBoard
+        fields = ('name', 'pk', 'messages', 'alerts')

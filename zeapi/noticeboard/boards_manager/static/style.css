@@ -6,7 +6,6 @@ html, body{
     color: #FAFAFA;
     padding-top: 1.75em;
 }
-
 .page-header{
     width: 100%;
     background: rgb(44,157,79);
@@ -70,7 +69,7 @@ html, body{
     vertical-align: top;
     cursor: pointer;
 }
-.edit-mode .notice-board:not(.notice-editing){
+.edit-mode .notice-board:not(.notice-editing), .edit-mode .board-post:not(.board-editing){
     filter: grayscale(90%);
     -webkit-filter: grayscale(90%);
     opacity: 0.4;
@@ -79,24 +78,24 @@ html, body{
     transition: filter 500ms, opacity 500ms;
     -webkit-transition : -webkit-filter 500ms, opacity 500ms;
 }
-.notice-editing{
+.notice-editing, .board-editing{
     cursor: auto;
     z-index: 1;
 }
-.notice-editing table{
+.notice-editing table, .board-editing table{
     margin: 0.5em;
     font-weight: 200;
     color: black;
     width: calc(100% - 1em);
 }
-.notice-editing th{
+.notice-editing th, .board-editing th{
     font-weight: 200;
     text-align: right;
 }
-.notice-editing input{
+.notice-editing input, .board-editing input, .board-editing textarea{
     width: 100%;
 }
-.notice-editing footer{
+.notice-editing footer, .board-editing footer{
     vertical-align: bottom;
     text-align: right;
     margin: 0.5em;
@@ -129,6 +128,10 @@ html, body{
     background: #FFFFFF;
     height: 188px;
     overflow: hidden;
+}
+.board-post.alert{
+    border-left: solid red 5px;
+    width: calc(50% - 0.7em - 8px);
 }
 .board-post-text{
     margin: 1em;
@@ -168,10 +171,22 @@ html, body{
     cursor: pointer;
     align-self: flex-start;
 }
+.board-post.alert{
+    border-left: solid #fe2e4d 5px;
+    width: calc(17em - 5px);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
 .notice-board-content .board-post header{
     font-size: 1.2em;
     margin-top: 1em;
 }
 .notice-board-content .notice-board-action{
-    margin: 30% 2em;
+    margin: 20% 2em;
+}
+
+.notice-board-action .material-icons{
+    display: block;
+    font-size: 3em;
+    margin: 0.3em;
 }

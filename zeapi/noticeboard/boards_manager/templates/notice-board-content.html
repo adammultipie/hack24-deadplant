@@ -25,13 +25,15 @@
 </header>
 <section class="notice-board-content">
     <section class="left-column">
-        <article class="board-post">
+        <article class="board-post add-notice-button">
             <p class="notice-board-action">
+            <i class="material-icons">add_circle_outline</i> 
             Add a new notice
             </p>
         </article>
-        <article class="board-post">
+        <article class="board-post add-alert-button">
             <p class="notice-board-action">
+            <i class="material-icons">add_alert</i> 
             Send out a new alert
             <small>
                 This will cancel existing alert.
@@ -42,11 +44,13 @@
     <section class="right-column">
         <section class="right-flex">
             {% for post in posts %}
-            <article class="board-post" data-url="{{post.file.url}}">
+            <article class="board-post {% if post.is_alert %}alert{% endif %}" {% if post.file != '' %}data-url="{{post.file.url}}"{% endif %}>
                 <header>
                 {{ post.title |title}}
                 </header>
+                {% if post.thumbnail != '' %}
                 <img src="{{post.thumbnail.url}}" />
+                {% endif %}
                 <p class="board-post-text">{{post.text}}</p>
                 <footer>
                 </footer>     
@@ -61,12 +65,69 @@
     }
 
 </style>
+
+<script type="text/html" id="new-notice-board">
+<article class="board-post new-post board-editing">
+    <form action="{% url "board-post-message" noticeboard_pk=board.pk%}" method="post" enctype="multipart/form-data">
+        <table>
+            <tbody>
+                <tr>
+                    <th>
+                        Title
+                    </th>
+                    <td>
+                        <input name="title">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        File
+                    </th>
+                    <td>
+                        <input type="file" name="file">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Text
+                    </th>
+                    <td>
+                        <textarea name="title" rows="8"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        {% csrf_token %}
+        <footer>
+            <button type="reset" class="cancel-button"><i class="material-icons">close</i> Cancel</button>
+            <button class="accept-button"><i class="material-icons">check</i> Accept changes</button>
+        </footer>
+
+    </form>  
+</article>
+</script>
 <script>
     $(document).ready(function(){
         $('body').on('click', '.board-post', function(){
             var url = $(this).data('url');
+            if(!url){
+                return;
+            }
             document.location.href = url;
-        })
+        }).on('click', '.cancel-button', function(){
+            $('body').removeClass('edit-mode');
+            $('.new-post').remove();
+        });
+        $('.add-notice-button').click(function(){
+            $('body').addClass('edit-mode');
+            $('.right-flex').prepend($('#new-notice-board').html());
+        });
+        $('.add-alert-button').click(function(){
+            $('body').addClass('edit-mode');
+            $('.right-flex').prepend($('#new-notice-board').html());
+            $('.new-post form').append('<input type="hidden" name="isalert" value="true">');
+            $('.new-post').addClass('alert');
+        });
     });
 </script>
 {% endblock %}

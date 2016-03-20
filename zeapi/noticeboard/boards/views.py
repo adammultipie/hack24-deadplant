@@ -86,15 +86,22 @@ def post_message(request, noticeboard_pk):
             data = json.loads(request.body)
         except ValueError:
             data = {}
-
+    if data.get('isalert', False):
+        otheralerts = models.Post.objects.filter(board=board, is_alert=True).all()
+        for alert in otheralerts:
+            alert.is_alert = False
+            alert.save()
+        
     post = models.Post()
     post.creator = request.user
     post.title = data.get('title', 'Untitled')
+    post.is_alert = data.get('isalert', False)
     post.board = board
     for file_name in request.FILES:
         if request.FILES[file_name]:
             post.file = request.FILES[file_name]
     post.save()
+    post.create_thumbnail()
 
     serializer = serializers.PostSerializer(post, many=False, context={'request': request})
     return Response(serializer.data)
