@@ -1,0 +1,21 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+use_frameworks!
+
+target 'Hack24' do
+
+pod 'Alamofire'
+pod 'AlamofireImage', '~> 2.0'
+pod 'KYDrawerController'
+
+end
+
+target 'Hack24Tests' do
+
+end
+
+target 'Hack24UITests' do
+
+end
+

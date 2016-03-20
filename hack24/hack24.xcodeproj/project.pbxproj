@@ -7,13 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		367C942C20776220CDFCA5FD /* Pods_Hack24.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FEF95C786C1378D66F792B4 /* Pods_Hack24.framework */; };
+		4C245B321C9E117D00C21663 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C245B311C9E117D00C21663 /* CardView.swift */; };
+		4C245B341C9E11B700C21663 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C245B331C9E11B700C21663 /* CardView.xib */; };
+		4C245B361C9E2E1600C21663 /* NavigationDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C245B351C9E2E1600C21663 /* NavigationDrawerViewController.swift */; };
+		4C245B391C9E2FDD00C21663 /* NavMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C245B381C9E2FDD00C21663 /* NavMapCell.swift */; };
+		4C245B3B1C9E2FEE00C21663 /* NavHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C245B3A1C9E2FEE00C21663 /* NavHeaderCell.swift */; };
+		4C245B3E1C9E300800C21663 /* NavBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C245B3D1C9E300800C21663 /* NavBoardCell.swift */; };
+		4C245B401C9E330400C21663 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C245B3F1C9E330400C21663 /* MapKit.framework */; };
+		4C245B421C9E46E400C21663 /* NBDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C245B411C9E46E400C21663 /* NBDrawerViewController.swift */; };
 		4C371EF61C9D86640077A8E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371EF51C9D86640077A8E9 /* AppDelegate.swift */; };
 		4C371EF81C9D86640077A8E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371EF71C9D86640077A8E9 /* ViewController.swift */; };
-		4C371EFB1C9D86640077A8E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C371EF91C9D86640077A8E9 /* Main.storyboard */; };
 		4C371EFD1C9D86640077A8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C371EFC1C9D86640077A8E9 /* Assets.xcassets */; };
 		4C371F001C9D86640077A8E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C371EFE1C9D86640077A8E9 /* LaunchScreen.storyboard */; };
 		4C371F0B1C9D86650077A8E9 /* Hack24Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371F0A1C9D86650077A8E9 /* Hack24Tests.swift */; };
 		4C371F161C9D86650077A8E9 /* Hack24UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371F151C9D86650077A8E9 /* Hack24UITests.swift */; };
+		4C371F281C9D8A600077A8E9 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371F231C9D8A600077A8E9 /* AddItemViewController.swift */; };
+		4C371F291C9D8A600077A8E9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371F241C9D8A600077A8E9 /* Item.swift */; };
+		4C371F2A1C9D8A600077A8E9 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371F251C9D8A600077A8E9 /* ItemCell.swift */; };
+		4C371F2B1C9D8A600077A8E9 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371F261C9D8A600077A8E9 /* ItemsViewController.swift */; };
+		4C371F2C1C9D8A600077A8E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C371F271C9D8A600077A8E9 /* Main.storyboard */; };
+		4C371F2E1C9D8AFB0077A8E9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C371F2D1C9D8AFB0077A8E9 /* CoreLocation.framework */; };
+		4C371F301C9D8BB80077A8E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C371F2F1C9D8BB80077A8E9 /* Foundation.framework */; };
+		4C371F321C9D8BC20077A8E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C371F311C9D8BC20077A8E9 /* UIKit.framework */; };
+		4C371F341C9D969C0077A8E9 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371F331C9D969C0077A8E9 /* Config.swift */; };
+		4C371F361C9D97370077A8E9 /* BeaconInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371F351C9D97370077A8E9 /* BeaconInteractor.swift */; };
+		4C371F381C9D9E140077A8E9 /* BoardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C371F371C9D9E140077A8E9 /* BoardInteractor.swift */; };
+		4C9F8DC81C9DAD910016AEEB /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F8DC71C9DAD910016AEEB /* BoardViewController.swift */; };
+		4C9F8DCB1C9DBC7A0016AEEB /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F8DCA1C9DBC7A0016AEEB /* Board.swift */; };
+		4C9F8DCD1C9DBC920016AEEB /* JSONRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F8DCC1C9DBC920016AEEB /* JSONRepresentable.swift */; };
+		4C9F8DCF1C9DBDD40016AEEB /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F8DCE1C9DBDD40016AEEB /* Notice.swift */; };
+		4C9F8DD21C9DBE820016AEEB /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F8DD11C9DBE820016AEEB /* UIColor+Extensions.swift */; };
+		4C9F8DD41C9DCCBC0016AEEB /* GlobalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F8DD31C9DCCBC0016AEEB /* GlobalFunc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +59,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		083D4B47B0119758CFCD8BC9 /* Pods-Hack24.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hack24.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hack24/Pods-Hack24.release.xcconfig"; sourceTree = "<group>"; };
+		4C245B311C9E117D00C21663 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		4C245B331C9E11B700C21663 /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		4C245B351C9E2E1600C21663 /* NavigationDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationDrawerViewController.swift; sourceTree = "<group>"; };
+		4C245B381C9E2FDD00C21663 /* NavMapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavMapCell.swift; sourceTree = "<group>"; };
+		4C245B3A1C9E2FEE00C21663 /* NavHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavHeaderCell.swift; sourceTree = "<group>"; };
+		4C245B3D1C9E300800C21663 /* NavBoardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBoardCell.swift; sourceTree = "<group>"; };
+		4C245B3F1C9E330400C21663 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4C245B411C9E46E400C21663 /* NBDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBDrawerViewController.swift; sourceTree = "<group>"; };
 		4C371EF21C9D86640077A8E9 /* Hack24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hack24.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C371EF51C9D86640077A8E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C371EF71C9D86640077A8E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4C371EFA1C9D86640077A8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C371EFC1C9D86640077A8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C371EFF1C9D86640077A8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C371F011C9D86640077A8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +80,25 @@
 		4C371F111C9D86650077A8E9 /* Hack24UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hack24UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C371F151C9D86650077A8E9 /* Hack24UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hack24UITests.swift; sourceTree = "<group>"; };
 		4C371F171C9D86650077A8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C371F231C9D8A600077A8E9 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		4C371F241C9D8A600077A8E9 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		4C371F251C9D8A600077A8E9 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		4C371F261C9D8A600077A8E9 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		4C371F271C9D8A600077A8E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4C371F2D1C9D8AFB0077A8E9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4C371F2F1C9D8BB80077A8E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4C371F311C9D8BC20077A8E9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4C371F331C9D969C0077A8E9 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		4C371F351C9D97370077A8E9 /* BeaconInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconInteractor.swift; sourceTree = "<group>"; };
+		4C371F371C9D9E140077A8E9 /* BoardInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardInteractor.swift; sourceTree = "<group>"; };
+		4C9F8DC71C9DAD910016AEEB /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		4C9F8DCA1C9DBC7A0016AEEB /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		4C9F8DCC1C9DBC920016AEEB /* JSONRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONRepresentable.swift; sourceTree = "<group>"; };
+		4C9F8DCE1C9DBDD40016AEEB /* Notice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
+		4C9F8DD11C9DBE820016AEEB /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		4C9F8DD31C9DCCBC0016AEEB /* GlobalFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunc.swift; sourceTree = "<group>"; };
+		5FEF95C786C1378D66F792B4 /* Pods_Hack24.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hack24.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7DAA1330CF8B3F6D4BECF62 /* Pods-Hack24.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hack24.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hack24/Pods-Hack24.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +106,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C245B401C9E330400C21663 /* MapKit.framework in Frameworks */,
+				4C371F321C9D8BC20077A8E9 /* UIKit.framework in Frameworks */,
+				4C371F301C9D8BB80077A8E9 /* Foundation.framework in Frameworks */,
+				4C371F2E1C9D8AFB0077A8E9 /* CoreLocation.framework in Frameworks */,
+				367C942C20776220CDFCA5FD /* Pods_Hack24.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +131,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C245B301C9E111A00C21663 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C245B311C9E117D00C21663 /* CardView.swift */,
+				4C245B331C9E11B700C21663 /* CardView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4C245B371C9E2FBA00C21663 /* UITableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				4C245B381C9E2FDD00C21663 /* NavMapCell.swift */,
+				4C245B3A1C9E2FEE00C21663 /* NavHeaderCell.swift */,
+				4C245B3D1C9E300800C21663 /* NavBoardCell.swift */,
+			);
+			name = UITableViewCells;
+			sourceTree = "<group>";
+		};
 		4C371EE91C9D86640077A8E9 = {
 			isa = PBXGroup;
 			children = (
+				4C371F311C9D8BC20077A8E9 /* UIKit.framework */,
+				4C371F2F1C9D8BB80077A8E9 /* Foundation.framework */,
+				4C371F2D1C9D8AFB0077A8E9 /* CoreLocation.framework */,
 				4C371EF41C9D86640077A8E9 /* Hack24 */,
 				4C371F091C9D86650077A8E9 /* Hack24Tests */,
 				4C371F141C9D86650077A8E9 /* Hack24UITests */,
 				4C371EF31C9D86640077A8E9 /* Products */,
+				DD00324A97BE614432A11B81 /* Pods */,
+				FC9E65D1A6AA83E665FC9EF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +178,27 @@
 		4C371EF41C9D86640077A8E9 /* Hack24 */ = {
 			isa = PBXGroup;
 			children = (
+				4C245B371C9E2FBA00C21663 /* UITableViewCells */,
+				4C245B301C9E111A00C21663 /* Views */,
+				4C9F8DD01C9DBE670016AEEB /* Extensions */,
+				4C9F8DC91C9DBC320016AEEB /* Model */,
+				4C371F231C9D8A600077A8E9 /* AddItemViewController.swift */,
+				4C371F241C9D8A600077A8E9 /* Item.swift */,
+				4C371F251C9D8A600077A8E9 /* ItemCell.swift */,
+				4C371F261C9D8A600077A8E9 /* ItemsViewController.swift */,
+				4C371F271C9D8A600077A8E9 /* Main.storyboard */,
 				4C371EF51C9D86640077A8E9 /* AppDelegate.swift */,
 				4C371EF71C9D86640077A8E9 /* ViewController.swift */,
-				4C371EF91C9D86640077A8E9 /* Main.storyboard */,
 				4C371EFC1C9D86640077A8E9 /* Assets.xcassets */,
 				4C371EFE1C9D86640077A8E9 /* LaunchScreen.storyboard */,
 				4C371F011C9D86640077A8E9 /* Info.plist */,
+				4C371F331C9D969C0077A8E9 /* Config.swift */,
+				4C371F351C9D97370077A8E9 /* BeaconInteractor.swift */,
+				4C371F371C9D9E140077A8E9 /* BoardInteractor.swift */,
+				4C9F8DC71C9DAD910016AEEB /* BoardViewController.swift */,
+				4C9F8DD31C9DCCBC0016AEEB /* GlobalFunc.swift */,
+				4C245B351C9E2E1600C21663 /* NavigationDrawerViewController.swift */,
+				4C245B411C9E46E400C21663 /* NBDrawerViewController.swift */,
 			);
 			path = Hack24;
 			sourceTree = "<group>";
@@ -125,6 +221,42 @@
 			path = Hack24UITests;
 			sourceTree = "<group>";
 		};
+		4C9F8DC91C9DBC320016AEEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C9F8DCA1C9DBC7A0016AEEB /* Board.swift */,
+				4C9F8DCC1C9DBC920016AEEB /* JSONRepresentable.swift */,
+				4C9F8DCE1C9DBDD40016AEEB /* Notice.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4C9F8DD01C9DBE670016AEEB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4C9F8DD11C9DBE820016AEEB /* UIColor+Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		DD00324A97BE614432A11B81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7DAA1330CF8B3F6D4BECF62 /* Pods-Hack24.debug.xcconfig */,
+				083D4B47B0119758CFCD8BC9 /* Pods-Hack24.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC9E65D1A6AA83E665FC9EF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C245B3F1C9E330400C21663 /* MapKit.framework */,
+				5FEF95C786C1378D66F792B4 /* Pods_Hack24.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +264,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C371F1A1C9D86650077A8E9 /* Build configuration list for PBXNativeTarget "Hack24" */;
 			buildPhases = (
+				219C26DAA3E605D634BC6733 /* Check Pods Manifest.lock */,
 				4C371EEE1C9D86640077A8E9 /* Sources */,
 				4C371EEF1C9D86640077A8E9 /* Frameworks */,
 				4C371EF01C9D86640077A8E9 /* Resources */,
+				FC755113DB5B65688F725964 /* Embed Pods Frameworks */,
+				7BACAC201D884DB80A3B020E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,7 +366,8 @@
 			files = (
 				4C371F001C9D86640077A8E9 /* LaunchScreen.storyboard in Resources */,
 				4C371EFD1C9D86640077A8E9 /* Assets.xcassets in Resources */,
-				4C371EFB1C9D86640077A8E9 /* Main.storyboard in Resources */,
+				4C245B341C9E11B700C21663 /* CardView.xib in Resources */,
+				4C371F2C1C9D8A600077A8E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +387,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		219C26DAA3E605D634BC6733 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7BACAC201D884DB80A3B020E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hack24/Pods-Hack24-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC755113DB5B65688F725964 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hack24/Pods-Hack24-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4C371EEE1C9D86640077A8E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9F8DCD1C9DBC920016AEEB /* JSONRepresentable.swift in Sources */,
+				4C371F291C9D8A600077A8E9 /* Item.swift in Sources */,
+				4C245B3B1C9E2FEE00C21663 /* NavHeaderCell.swift in Sources */,
+				4C245B421C9E46E400C21663 /* NBDrawerViewController.swift in Sources */,
+				4C245B391C9E2FDD00C21663 /* NavMapCell.swift in Sources */,
+				4C9F8DCF1C9DBDD40016AEEB /* Notice.swift in Sources */,
+				4C371F2B1C9D8A600077A8E9 /* ItemsViewController.swift in Sources */,
 				4C371EF81C9D86640077A8E9 /* ViewController.swift in Sources */,
+				4C371F341C9D969C0077A8E9 /* Config.swift in Sources */,
+				4C9F8DCB1C9DBC7A0016AEEB /* Board.swift in Sources */,
+				4C371F361C9D97370077A8E9 /* BeaconInteractor.swift in Sources */,
 				4C371EF61C9D86640077A8E9 /* AppDelegate.swift in Sources */,
+				4C245B361C9E2E1600C21663 /* NavigationDrawerViewController.swift in Sources */,
+				4C371F381C9D9E140077A8E9 /* BoardInteractor.swift in Sources */,
+				4C9F8DD41C9DCCBC0016AEEB /* GlobalFunc.swift in Sources */,
+				4C371F281C9D8A600077A8E9 /* AddItemViewController.swift in Sources */,
+				4C9F8DD21C9DBE820016AEEB /* UIColor+Extensions.swift in Sources */,
+				4C371F2A1C9D8A600077A8E9 /* ItemCell.swift in Sources */,
+				4C245B321C9E117D00C21663 /* CardView.swift in Sources */,
+				4C245B3E1C9E300800C21663 /* NavBoardCell.swift in Sources */,
+				4C9F8DC81C9DAD910016AEEB /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +496,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4C371EF91C9D86640077A8E9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C371EFA1C9D86640077A8E9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4C371EFE1C9D86640077A8E9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -397,22 +592,24 @@
 		};
 		4C371F1B1C9D86650077A8E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7DAA1330CF8B3F6D4BECF62 /* Pods-Hack24.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Hack24/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MultiPie.Hack24;
+				PRODUCT_BUNDLE_IDENTIFIER = com.multipie.Hack24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		4C371F1C1C9D86650077A8E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 083D4B47B0119758CFCD8BC9 /* Pods-Hack24.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Hack24/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MultiPie.Hack24;
+				PRODUCT_BUNDLE_IDENTIFIER = com.multipie.Hack24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -484,6 +681,7 @@
 				4C371F1C1C9D86650077A8E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C371F1D1C9D86650077A8E9 /* Build configuration list for PBXNativeTarget "Hack24Tests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +690,7 @@
 				4C371F1F1C9D86650077A8E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C371F201C9D86650077A8E9 /* Build configuration list for PBXNativeTarget "Hack24UITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +699,7 @@
 				4C371F221C9D86650077A8E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
