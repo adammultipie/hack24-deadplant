@@ -14,7 +14,7 @@ typealias BeaconRequest = ([CLBeaconRegion]?) -> Void
 class BeaconInteractor: NSObject {
     
     let locationManager = CLLocationManager()
-    let boardInteractor = BoardsInteractor();
+    var boardInteractor:BoardsInteractor?
     var beacons:[CLBeaconRegion]?;
     
     func start() {
@@ -60,7 +60,7 @@ extension BeaconInteractor: CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
-        self.boardInteractor.onBeaconsDiscovered(beacons);
+        self.boardInteractor?.onBeaconsDiscovered(beacons);
     }
     
     func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {

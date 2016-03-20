@@ -19,26 +19,49 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jsU-8C-PH8">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPz-P7-vAg">
+                            <rect key="frame" x="562" y="5" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="HVn-jN-lyp"/>
+                                <constraint firstAttribute="width" constant="30" id="M2n-h5-z8H"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="ic_hearing_48pt"/>
+                            <connections>
+                                <action selector="onSpeechClicked:" destination="-1" eventType="touchUpInside" id="M9h-MW-Pww"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="JPz-P7-vAg" firstAttribute="centerY" secondItem="jsU-8C-PH8" secondAttribute="centerY" id="2yW-lx-f0n"/>
+                        <constraint firstItem="JPz-P7-vAg" firstAttribute="top" secondItem="jsU-8C-PH8" secondAttribute="top" id="UGs-VK-4fD"/>
+                        <constraint firstAttribute="trailing" secondItem="JPz-P7-vAg" secondAttribute="trailing" constant="8" id="VCI-IO-upA"/>
                         <constraint firstAttribute="height" constant="40" id="iSg-KE-12A"/>
+                        <constraint firstAttribute="bottom" secondItem="JPz-P7-vAg" secondAttribute="bottom" id="tnD-yn-lFI"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="UGs-VK-4fD"/>
+                            <exclude reference="tnD-yn-lFI"/>
+                        </mask>
+                    </variation>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rn-1A-tEt">
                     <rect key="frame" x="8" y="48" width="584" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RJ1-Qb-hDf">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RJ1-Qb-hDf">
                     <rect key="frame" x="8" y="76" width="584" height="200"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="JNi-fh-hUx"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWV-I5-UpE">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWV-I5-UpE">
                     <rect key="frame" x="8" y="284" width="584" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -61,4 +84,7 @@
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="ic_hearing_48pt" width="48" height="48"/>
+    </resources>
 </document>

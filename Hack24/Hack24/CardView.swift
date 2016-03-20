@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import AVFoundation
+
+typealias ClickHandler = (Void) -> Void
 
 class CardView: UIView {
     
     var view: UIView!
     let nibName = "CardView"
+    
+    var clickHandler:ClickHandler?
 
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -33,6 +38,7 @@ class CardView: UIView {
         view.frame = bounds
         view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
         addSubview(view)
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("onTap")))
     }
     
     func loadViewFromNib() -> UIView {
@@ -43,5 +49,25 @@ class CardView: UIView {
         
         return view
     }
-
+    
+    func onTap() {
+        if let handler = clickHandler {
+            handler()
+        }
+    }
+    
+    @IBAction func onSpeechClicked(sender: AnyObject) {
+        let synth = AVSpeechSynthesizer()
+        if let text = self.title.text {
+            let utterance = AVSpeechUtterance(string: text)
+            synth.speakUtterance(utterance)
+        }
+        if let text = self.contentsLabel.text {
+            let contentUtterance = AVSpeechUtterance(string: text)
+            synth.speakUtterance(contentUtterance)
+        }
+        
+        
+    }
+    
 }

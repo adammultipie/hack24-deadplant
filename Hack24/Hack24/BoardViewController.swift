@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import Alamofire
+import AlamofireImage
 
 private let standardMargin:CGFloat = 16;
 
@@ -64,42 +66,74 @@ class BoardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
+        self.title = "Curiosity"
         scrollView.delegate = self
         scrollView.minimumZoomScale = 0.1
         scrollView.maximumZoomScale = 1;
+        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated);
-        var startTile:Tile? = nil;
-        var tiles = [Tile]()
-        for var i = 0; i < 3; i++ {
-            let view = UIView();
-            view.translatesAutoresizingMaskIntoConstraints = false;
-            view.backgroundColor = UIColor.random();
-            if let _ = startTile {
-                let newTile:Tile;
-                if i % 2 == 0 {
-                    newTile = tiles[i - 2].bottom(view)
-                } else {
-                    newTile = tiles[i-1].right(view)
+        AppDelegate.boardsInteractor.getBoardMessages("1").responseJSON { (response:Response<AnyObject, NSError>) -> Void in
+            print(response.result.value)
+            var messages = [Notice]()
+            if let array = response.result.value as? NSArray {
+                for element in array {
+                    if let dict = element as? NSDictionary {
+                        if let message = Notice(json: dict) {
+                            messages.append(message);
+                        }
+                    }
                 }
-                newTile.rect.size.width = 0.8;
-                if (i == 1) {
-                    newTile.rect.size.height = 0.5;
-                } else {
-                   newTile.rect.size.height = 1;
+            }
+            var startTile:Tile? = nil;
+            var tiles = [Tile]()
+            for var i = 0; i < messages.count; i++ {
+                let view = CardView();
+                let message = messages[i];
+                view.clickHandler = { Void in
+                    if let fileUrl = message.file, let url = NSURL(string: fileUrl) {
+                        self.presentAssetInterface(url);
+                    }
+                }
+                view.title.text = message.title
+                view.imageView.image = nil;
+                view.contentsLabel.text = message.text
+                if let imageFile = message.thumbnail {
+                   // request(imageFile).
+                    request(.GET, imageFile).responseImage(completionHandler: { (response:Response<Image, NSError>) -> Void in
+                        view.imageView.image = response.result.value
+                    })
                 }
                 
-                tiles.append(newTile)
-            } else {
-                startTile = Tile(view: view)
-                startTile?.rect.size.height = 1;
-                startTile?.rect.size.width = 0.8;
-                tiles.append(startTile!)
+                view.translatesAutoresizingMaskIntoConstraints = false;
+                view.backgroundColor = UIColor.random();
+                if let _ = startTile {
+                    let newTile:Tile;
+                    if i % 2 == 0 {
+                        newTile = tiles[i - 2].bottom(view)
+                    } else {
+                        newTile = tiles[i-1].right(view)
+                    }
+                    newTile.rect.size.width = 0.8;
+                    if (i == 1) {
+                        newTile.rect.size.height = 0.5;
+                    } else {
+                        newTile.rect.size.height = 1;
+                    }
+                    
+                    tiles.append(newTile)
+                } else {
+                    startTile = Tile(view: view)
+                    startTile?.rect.size.height = 1;
+                    startTile?.rect.size.width = 0.8;
+                    tiles.append(startTile!)
+                }
             }
+            self.layoutViews(tiles);
         }
-        layoutViews(tiles);
+        
     }
     
     private func addTile(tile:Tile?) {
@@ -117,8 +151,6 @@ class BoardViewController: UIViewController {
         for child in containView.subviews {
             child.removeFromSuperview()
         }
-        let width = scrollView.frame.width - (standardMargin * 2);
-        let height = scrollView.frame.height - (standardMargin * 2);
         
         var rightEdge:Tile?
         var bottomEdge:Tile?
@@ -126,10 +158,8 @@ class BoardViewController: UIViewController {
         for tile in positions {
             addTile(tile)
             print("Placing tile at pos " + NSStringFromCGRect(tile.rect))
-//            let tileHeight = height * tile.rect.height;
-//            let tileWidth = width * tile.rect.width;
             scrollView.addConstraint(constraint(item: tile.view, attribute: .Width, toItem:scrollView, multiplier:tile.rect.size.width, constant:-standardMargin * 2))
-            scrollView.addConstraint(constraint(item: tile.view, attribute: .Height, toItem:scrollView, multiplier:tile.rect.size.height, constant:-standardMargin * 2))
+//            scrollView.addConstraint(constraint(item: tile.view, attribute: .Height, toItem:scrollView, multiplier:tile.rect.size.height, constant:-standardMargin * 2))
             if let left = tile.leftTile {
                 containView.addConstraint(horizontalConstraint(left.view, right: tile.view))
             } else {
@@ -201,6 +231,10 @@ class BoardViewController: UIViewController {
         let tileMaxY = CGRectGetMaxY(tile.rect);
         
         return [tileMinX, tileMinY, tileMaxX, tileMaxY];
+    }
+    
+    private func presentAssetInterface(url:NSURL) {
+        UIApplication.sharedApplication().openURL(url);
     }
     
 }

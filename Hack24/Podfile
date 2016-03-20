@@ -6,6 +6,8 @@ use_frameworks!
 target 'Hack24' do
 
 pod 'Alamofire'
+pod 'AlamofireImage', '~> 2.0'
+
 
 end
 
