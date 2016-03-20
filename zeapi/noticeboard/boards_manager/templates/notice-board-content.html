@@ -39,17 +39,21 @@
             </p>
         </article>
     </section>
-    {% for post in posts %}
-    <article class="board-post">
-        <header>
-        {{ post.title |title}}
-        </header>
-        <img src="{{post.thumbnail.url}}" />
-        <p class="board-post-text">{{post.text}}</p>
-        <footer>
-        </footer>     
-     </article>
-{% endfor %}
+    <section class="right-column">
+        <section class="right-flex">
+            {% for post in posts %}
+            <article class="board-post" data-url="{{post.file.url}}">
+                <header>
+                {{ post.title |title}}
+                </header>
+                <img src="{{post.thumbnail.url}}" />
+                <p class="board-post-text">{{post.text}}</p>
+                <footer>
+                </footer>     
+             </article>
+             {% endfor %}
+         </section>
+    </section>
 </section>
 <style>
     html, body{
@@ -59,8 +63,9 @@
 </style>
 <script>
     $(document).ready(function(){
-        $('body').on('click', '.notice-board', function(){
-            alert('u wot m8');
+        $('body').on('click', '.board-post', function(){
+            var url = $(this).data('url');
+            document.location.href = url;
         })
     });
 </script>

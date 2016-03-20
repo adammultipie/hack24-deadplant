@@ -43,6 +43,20 @@ html, body{
     display: inline-block;
     vertical-align: top;
 }
+.right-column{
+    width: calc(100% - 18em);
+    vertical-align: top;
+    display: inline-block;
+}
+.right-flex{
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    max-height: 150%;
+}
 .notice-board{
     width: 17em;
     min-height: 10em;
@@ -79,6 +93,7 @@ html, body{
     vertical-align: top;
     background: #FFFFFF;
     height: 188px;
+    overflow: hidden;
 }
 .board-post-text{
     margin: 1em;
@@ -116,6 +131,7 @@ html, body{
     overflow: hidden;
     vertical-align: top;
     cursor: pointer;
+    align-self: flex-start;
 }
 .notice-board-content .board-post header{
     font-size: 1.2em;

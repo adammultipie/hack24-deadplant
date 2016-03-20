@@ -56,6 +56,10 @@ def create_thumbnail(sender, instance=None, created=True, **kwargs):
         return
     if not created:
         return
+    if instance.file.name[-3:].lower() == 'gif':
+        instance.thumbnail = instance.file
+        instance.save()
+        return
 
     with Image(filename=instance.file.path + '[0]') as img:
         width, height = img.size
