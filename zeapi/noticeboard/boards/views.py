@@ -39,7 +39,8 @@ def post_message(request, noticeboard_pk):
     post.title = data.get('title', 'Untitled')
     post.board = board
     for file_name in request.FILES:
-        post.file = request.FILES[file_name]
+        if request.FILES[file_name]:
+            post.file = request.FILES[file_name]
     post.save()
 
     serializer = serializers.PostSerializer(post, many=False, context={'request': request})

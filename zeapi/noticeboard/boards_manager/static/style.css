@@ -1,0 +1,126 @@
+html, body{
+    font-family: 'Helvetica Neue Thin', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(54,54,54);
+    color: #FAFAFA;
+    padding-top: 1.75em;
+}
+
+.page-header{
+    width: 100%;
+    background: rgb(44,157,79);
+    font-weight: 200;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo {
+    cursor: pointer;
+}
+.page-header table{
+    width: 100%;
+}
+.page-header h1{
+    padding: 0.5em;
+    font-weight: 200;
+    margin: 0;
+    font-size: 22px;
+
+}
+.page-header author{
+    text-align: right;
+    margin: 1em;
+    font-weight: 200;
+}
+.page-header .author-cell{
+    text-align: right;
+}
+.left-column{
+    width: 17.25em;
+    display: inline-block;
+    vertical-align: top;
+}
+.notice-board{
+    width: 17em;
+    min-height: 10em;
+    display: inline-block;
+    margin: 1em;
+    margin-right: 0;
+    background: rgb(243,243,243);
+    color: #000000;
+    overflow: hidden;
+    vertical-align: top;
+    cursor: pointer;
+}
+.notice-board-action{
+    color: #fe2e4d;   
+    text-align: center;
+    vertical-align: middle;
+    margin: 40% 3em;
+    font-weight: 300;
+}
+.notice-board-action small{
+    display: block;
+}
+.notice-board > header{
+    padding: 1em;
+    background: #fe2e4d;
+    color: #fafafa;
+    font-size: 1.2em;
+    font-weight: 200;
+}
+.board-post{
+    display: inline-block;
+    width: calc(50% - 0.7em - 3px);
+    margin: 0.5em;
+    vertical-align: top;
+    background: #FFFFFF;
+    height: 188px;
+}
+.board-post-text{
+    margin: 1em;
+    font-size: 0.8em;
+    font-weight: 100;
+    white-space: pre-wrap;
+}
+.board-post.left{
+    margin-right: 0.2em;
+}
+.board-post.right{
+    margin-left: 0.2em;
+}
+.board-post > header{
+    font-size: 0.6em;
+    padding: 0.8em;
+}
+.board-post img{
+    width: calc(100% - 0.5em);
+    margin: 0.25em;
+}
+.notice-board-content{
+    margin: 0.25em;
+}
+.notice-board-content .board-post{
+    width: 17em;
+    min-height: 10em;
+    height: auto;
+    display: inline-block;
+    margin: 0.25em;
+    margin-right: 0;
+    margin-bottom: 0.25em;
+    background: #FFFFFF;
+    color: #000000;
+    overflow: hidden;
+    vertical-align: top;
+    cursor: pointer;
+}
+.notice-board-content .board-post header{
+    font-size: 1.2em;
+    margin-top: 1em;
+}
+.notice-board-content .notice-board-action{
+    margin: 30% 2em;
+}

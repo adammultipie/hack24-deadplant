@@ -18,6 +18,7 @@ class NoticeBoardSerializer(serializers.ModelSerializer):
 
 class PostSerializer(serializers.ModelSerializer):
     file = serializers.SerializerMethodField()
+    thumb = serializers.SerializerMethodField()
     author = serializers.SlugRelatedField(many=False, read_only=True,
                                           slug_field='username', source='creator')
 
@@ -25,6 +26,10 @@ class PostSerializer(serializers.ModelSerializer):
         if not obj.file:
             return ''
         return self.context['request'].build_absolute_uri(obj.file.url)
+    def get_thumb(self, obj):
+        if not obj.thumbnail:
+            return ''
+        return self.context['request'].build_absolute_uri(obj.thumbnail.url)
     class Meta:
         model = models.Post
-        fields = ('pk', 'title', 'file', 'created', 'author')
+        fields = ('pk', 'title', 'file', 'created', 'author', 'text', 'thumb')

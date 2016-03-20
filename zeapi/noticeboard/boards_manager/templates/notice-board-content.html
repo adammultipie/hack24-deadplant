@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% block "body" %}
+<header class="page-header">
+    <table>
+        <tbody>
+            <tr>
+                <td style="width: calc(40px + 1.1em);">
+                    <img class="logo" width="40" style="margin-left:1.1em; margin-top:0px;" src="{% static "logo.png" %}">
+                </td>
+                <td>
+                    <h1>
+                        {{board.name}}
+                    </h1>
+                </td>
+                <td class="author-cell">
+                    <author>
+                        {{user.username|title}}
+                    </author>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</header>
+<section class="notice-board-content">
+    <section class="left-column">
+        <article class="board-post">
+            <p class="notice-board-action">
+            Add a new notice
+            </p>
+        </article>
+        <article class="board-post">
+            <p class="notice-board-action">
+            Send out a new alert
+            <small>
+                This will cancel existing alert.
+            </small>
+            </p>
+        </article>
+    </section>
+    {% for post in posts %}
+    <article class="board-post">
+        <header>
+        {{ post.title |title}}
+        </header>
+        <img src="{{post.thumbnail.url}}" />
+        <p class="board-post-text">{{post.text}}</p>
+        <footer>
+        </footer>     
+     </article>
+{% endfor %}
+</section>
+<style>
+    html, body{
+        background: rgb(242,242,242);
+    }
+
+</style>
+<script>
+    $(document).ready(function(){
+        $('body').on('click', '.notice-board', function(){
+            alert('u wot m8');
+        })
+    });
+</script>
+{% endblock %}
