@@ -48,12 +48,12 @@ class NavigationDrawerViewController: UIViewController {
         }
     }
     
-    func getAlerts() -> [String] {
-        var alerts = [String]()
+    func getAlerts() -> [Notice] {
+        var alerts = [Notice]()
         for board in self.boards {
             for alert in board.alerts {
-                if let title = alert.title {
-                     alerts.append(title)
+                if let _ = alert.title {
+                     alerts.append(alert)
                 }
             }
         }
@@ -108,7 +108,7 @@ extension NavigationDrawerViewController: UITableViewDataSource {
             let alert = getAlerts()[indexPath.row]
             let alertCell = tableView.dequeueReusableCellWithIdentifier("alert") as! NavAlertCell
             cell = alertCell
-            alertCell.label.text = alert
+            alertCell.label.text = alert.title
         }
         return cell;
     }
@@ -149,7 +149,13 @@ extension NavigationDrawerViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 1 && indexPath.row > 0 {
+        if indexPath.section == 1 {
+            let alerts = getAlerts()[indexPath.row];
+            if let file = alerts.file, let url = NSURL(string: file) {
+                UIApplication.sharedApplication().openURL(url)
+            }
+            
+        } else if indexPath.section == 2 && indexPath.row > 0 {
             tableView.deselectRowAtIndexPath(indexPath, animated: true);
             tableView.reloadData()
             let board = self.boards[indexPath.row - 1];
